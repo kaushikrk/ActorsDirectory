@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+input[type="file"] {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+    z-index: 100 !important;
+    margin-top: -20px;
+    padding-top: -20px;
+    top: -20px;
+    border:2px solid black;
+    }

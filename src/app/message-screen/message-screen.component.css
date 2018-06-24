@@ -1,0 +1,21 @@
+.layer2{
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: lightgray;
+    z-index: 2;
+    width: 100%; /* Full width */
+    height: 100%;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    position:inherit;
+    top:25%;
+    left:10%;
+}

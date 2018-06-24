@@ -1,0 +1,70 @@
+<div class="row" style="margin:1%;">
+    <div *ngIf="successMessage" class="alert alert-success alert-dismissible">
+        <strong>Success!</strong> Thanks for registering with us. We will keep you posted.
+      </div>
+      <div *ngIf="failureMessage" class="alert alert-danger alert-dismissible">
+          <strong>Oops!</strong> {{failureMessage}}.
+        </div>
+  <div class="col-md-5">
+    <fieldset>
+      <Legend>Register with us</Legend>
+      <form #userForm="ngForm">
+        <div class="form-group">
+          <label for="name">Name*:</label>
+          <input type="text" class="form-control" id="name" name="name" #name="ngModel"
+          required minlength="3" pattern="^[a-zA-Z\s]*$" [(ngModel)]="newActor.actorName">
+        </div>
+        <div class="form-group">
+            <label for="age">Age*:</label>
+            <input type="number" class="form-control" pattern="^[0-9]{1,2}" name="age" id="age" #age="ngModel" 
+            required [(ngModel)]="newActor.actorAge">
+          </div>
+          <div class="form-group" id="gender">
+              <label for="gender">Gender*:</label>
+              <select class="form-control" id="gender" name="gender" [(ngModel)]="newActor.actorGender" #gender ="ngModel"
+              required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="others">Others</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="movies">Movies/Plays:</label>
+                <input type="text" title="Movies you have worked on" class="form-control" id="movies" 
+                [(ngModel)]="newActor.actorMovies"
+                name="movies"
+                >
+                <i>Please enter only movies you have worked in</i>
+            </div>
+            <div class="form-group">
+              <label for="number">Contact Number*:</label>
+              <input type="number" class="form-control" pattern="^[0-9]{10}" required
+               id="number" [(ngModel)]="newActor.actorContactNumber"
+              name="number"
+              >
+              <i>Display contact info on profile :</i>
+              <input type="checkbox" class="" id="number" [(ngModel)]="newActor.actorContactConsent"
+              name="contactConsent"
+              >
+            </div>
+      </form>
+    </fieldset>
+  </div>
+  <div class="row col-md-5 pull-right">
+      <div class="col-md-5">
+          <div class="form-group" style="margin:12%;">
+              <label for="photos">Photos*:</label>
+              <input type="file" (change)="uploadFiles($event)" 
+              accept="image/jpeg" class="btn btn-default" id="photos" required #fileUpload>
+              <button (click)="showUploadWindow(fileUpload)">Upload files</button>
+          </div>
+      </div>
+  </div>
+  <div class="row col-md-5 col-md-offset-2">
+      <div *ngIf="previewsrc" class=" col-md-5 preview">
+          <img src="{{previewsrc}}" alt="" class="preview">
+      </div> 
+  </div>
+</div>
+<i>* Mandatory fields</i>
+<button class="col-md-offset-5 btn btn-primary submit-btn" (click)="submit()" [disabled]="userForm.invalid">Submit</button>

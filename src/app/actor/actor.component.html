@@ -1,0 +1,18 @@
+<div class="row" style="margin:1%;">
+    <!-- <span class="fa fa-search pull-right" title="Click to search" (click)="searchActorList(searchBoxElement)"></span>
+    <input type="text" class="pull-right" #searchBoxElement> -->
+  <fieldset disabled="disabled">
+    <legend>Gallery</legend>
+  </fieldset>
+</div>
+<div class="row">
+  <div *ngFor="let actor of actorsList" class="col-md-3 col-sm-2">
+      <img routerLink="/actor-details"  (click)="loadProfile(actor)" 
+      class="grid-view" src="{{actor.actorPhoto}}" alt="{{actor.actorPhoto}}">
+      <span>
+          <a routerLink="/actor-details" (click)="loadProfile(actor)"
+          style="position:relative;left:3%;">{{actor.actorName}}</a>
+      </span>
+      
+  </div>
+</div>

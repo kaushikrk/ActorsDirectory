@@ -1,0 +1,19 @@
+@media only screen and (min-width: 768px){
+   .submit-btn.submit-btn-width {
+        width:150px;
+        height:30px;
+        position: relative;
+        left:25%;
+    }
+    }
+    .submit-btn{
+        background: linear-gradient( #3f3f3f,black);
+        border:none;
+        position: relative;
+        left:10%;
+        margin: 0 0 2% 2%;
+    }
+    .submit-btn:hover {
+        background: linear-gradient( #3f3f3f,black);
+        border:none;
+    }

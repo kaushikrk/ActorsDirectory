@@ -1,0 +1,560 @@
+{
+  "Items": [
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522599217643.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "98847xxxxx",
+      "actorMovies": "Kattam (Hero)",
+      "actorAge": 35,
+      "actorId": 1522599217643,
+      "actorName": "Nandan "
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522856566577.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "98410xxxxx",
+      "actorMovies": "Pokkiri",
+      "actorAge": 35,
+      "actorId": 1522856566577,
+      "actorName": "Karate Raja"
+    },
+    {
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522642578880.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "98402xxxxx",
+      "actorMovies": "Boys",
+      "actorAge": 45,
+      "actorId": 1522642578880,
+      "actorName": "Boys Rajan"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522642112240.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "98407xxxxx",
+      "actorMovies": "Kaththi, Kirumi",
+      "actorAge": 35,
+      "actorId": 1522642112240,
+      "actorName": "David"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522642539161.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "98418xxxxx",
+      "actorMovies": "Thalai Nagaram, Dheeran",
+      "actorAge": 38,
+      "actorId": 1522642539161,
+      "actorName": "Bose Venkat"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522598917303.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "87545xxxxx",
+      "actorAge": 25,
+      "actorId": 1522598917303,
+      "actorName": "Vasanth"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522598881483.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "98842xxxxx",
+      "actorAge": 25,
+      "actorId": 1522598881483,
+      "actorName": "Vinoth"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522597550087.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "98417xxxxx",
+      "actorMovies": "PIZZA, Echcharikkai",
+      "actorAge": 35,
+      "actorId": 1522597550087,
+      "actorName": "Jayakumar"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522641691940.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "88704xxxxx",
+      "actorMovies": "Pudupettai",
+      "actorAge": 43,
+      "actorId": 1522641691940,
+      "actorName": "Suresh"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522598003665.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "99077xxxxx",
+      "actorAge": 45,
+      "actorId": 1522598003665,
+      "actorName": "Mugilan"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522598047403.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "97911xxxxx",
+      "actorMovies": "Echcharikkai, Kutram 23",
+      "actorAge": 45,
+      "actorId": 1522598047403,
+      "actorName": "Leo"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522599268823.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "90032xxxxx",
+      "actorMovies": "Engeyum Eppothum",
+      "actorAge": 45,
+      "actorId": 1522599268823,
+      "actorName": "Kumaravadivel"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522644421020.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "90031xxxxx",
+      "actorMovies": "Ramanujar, OneDegreeSecond, Drishti",
+      "actorAge": 40,
+      "actorId": 1522644421020,
+      "actorName": "Venkat"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522641402720.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "97911xxxxx",
+      "actorMovies": "Paiyaa, Kaavalan, Raajapaattai & Few Others",
+      "actorAge": 32,
+      "actorId": 1522641402720,
+      "actorName": "Yogi Ram"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522597880784.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "98402xxxxx",
+      "actorMovies": "Kaththi",
+      "actorAge": 35,
+      "actorId": 1522597880784,
+      "actorName": "Dhayalan"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522857569877.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "93808xxxxx",
+      "actorMovies": "Mudhalvar Mahatma, Indru Netru Naalai",
+      "actorAge": 50,
+      "actorId": 1522857569877,
+      "actorName": "Gandhi Kanagaraj"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522597978664.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "99412xxxxx",
+      "actorMovies": "Kathi",
+      "actorAge": 45,
+      "actorId": 1522597978664,
+      "actorName": "Krishnan"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522598626427.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "96771xxxxx",
+      "actorMovies": "Uttama Villain",
+      "actorAge": 35,
+      "actorId": 1522598626427,
+      "actorName": "Veerabhagu"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522857440877.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "90032xxxxx",
+      "actorMovies": "Aandavan Kattalai",
+      "actorAge": 35,
+      "actorId": 1522857440877,
+      "actorName": "Nesan"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522598202807.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "98408xxxxx",
+      "actorMovies": "Kathi",
+      "actorAge": 45,
+      "actorId": 1522598202807,
+      "actorName": "KalanithiyanChandru"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522857765898.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "98844xxxxx",
+      "actorMovies": "Boss Engira Baskaran, Kumki, Sippai",
+      "actorAge": 25,
+      "actorId": 1522857765898,
+      "actorName": "Ashwin Raja"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522641539600.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "98413xxxxx",
+      "actorMovies": "Soodhu Kavvum",
+      "actorAge": 35,
+      "actorId": 1522641539600,
+      "actorName": "Vijay Muthu"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522598313783.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "98415xxxxx",
+      "actorAge": 35,
+      "actorId": 1522598313783,
+      "actorName": "GopalaKrishnan"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522599014003.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "93810xxxxx",
+      "actorMovies": "Thuppakki",
+      "actorAge": 50,
+      "actorId": 1522599014003,
+      "actorName": "Sankar Narayanan"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522642306760.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "95662xxxxx",
+      "actorMovies": "Thirupachi, Pichuva Kaththi",
+      "actorAge": 33,
+      "actorId": 1522642306760,
+      "actorName": "Cool Suresh"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522598847024.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "98840xxxxx",
+      "actorMovies": "Aandavan Kattalai, Kadal",
+      "actorAge": 45,
+      "actorId": 1522598847024,
+      "actorName": "Ramji"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522598517644.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "99946xxxxx",
+      "actorMovies": "Echcharikkai, Thegidi",
+      "actorAge": 25,
+      "actorId": 1522598517644,
+      "actorName": "Jai Balaji"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522641306360.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "98841xxxxx",
+      "actorMovies": "Sigai (To Release)",
+      "actorAge": 35,
+      "actorId": 1522641306360,
+      "actorName": "Birla Bose"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522598805824.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "98415xxxxx",
+      "actorAge": 35,
+      "actorId": 1522598805824,
+      "actorName": "Vijay Balaji"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522598351623.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "98943xxxxx",
+      "actorMovies": "Kanithan, Weekend Machan (Web Series)",
+      "actorAge": 28,
+      "actorId": 1522598351623,
+      "actorName": "Balaji Radhakrishnan"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522857713718.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "98401xxxxx",
+      "actorMovies": "Arima Namni, Saleem Nambiyar",
+      "actorAge": 40,
+      "actorId": 1522857713718,
+      "actorName": "Gopishankar"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522599344266.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "95519xxxxx",
+      "actorMovies": "Aandavan Kattalai, Kaththi",
+      "actorAge": 35,
+      "actorId": 1522599344266,
+      "actorName": "Red Giant Subramani"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522641623210.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "96001xxxxx",
+      "actorMovies": "University",
+      "actorAge": 45,
+      "actorId": 1522641623210,
+      "actorName": "Kadugu Ramamoorthy"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522641195700.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "90430xxxxx",
+      "actorMovies": "Thuruvangal Pathinaaru",
+      "actorAge": 45,
+      "actorId": 1522641195700,
+      "actorName": "Sarathy"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522857203817.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "98845xxxxx",
+      "actorMovies": "Theiva Magal, Thalaivaa",
+      "actorAge": 25,
+      "actorId": 1522857203817,
+      "actorName": "Kishore Kumar"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522641954321.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "86757xxxxx",
+      "actorMovies": "Soodhu Kavvum",
+      "actorAge": 25,
+      "actorId": 1522641954321,
+      "actorName": "Mippusamy"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522642503101.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "98412xxxxx",
+      "actorMovies": "Anniyan",
+      "actorAge": 50,
+      "actorId": 1522642503101,
+      "actorName": "Amara Sigamani"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522857803418.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "94473xxxxx",
+      "actorMovies": "Kaaka Muttai",
+      "actorAge": 40,
+      "actorId": 1522857803418,
+      "actorName": "Babu Antony"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522858360618.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "98407xxxxx",
+      "actorMovies": "Siruththai, Silambaattam, Boologam",
+      "actorAge": 40,
+      "actorId": 1522858360618,
+      "actorName": "Jeyaraman"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522597816883.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "90940xxxxx",
+      "actorMovies": "Aandavan Kattalai",
+      "actorAge": 25,
+      "actorId": 1522597816883,
+      "actorName": "Vinayagam"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522599102725.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "81243xxxxx",
+      "actorMovies": "Aandavan Kattalai",
+      "actorAge": 35,
+      "actorId": 1522599102725,
+      "actorName": "Thillai mani"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522857631838.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "98409xxxxx",
+      "actorMovies": "Kutrame Thandanai, Kaththi",
+      "actorAge": 40,
+      "actorId": 1522857631838,
+      "actorName": "Gopi Kannadasan"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522642213400.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "98410xxxxx",
+      "actorMovies": "Tamil Serials",
+      "actorAge": 35,
+      "actorId": 1522642213400,
+      "actorName": "Kamalesh"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522599055064.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "98412xxxxx",
+      "actorMovies": "Aandavan Kattalai",
+      "actorAge": 35,
+      "actorId": 1522599055064,
+      "actorName": "Ramesh"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522857682177.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "94441xxxxx",
+      "actorMovies": "Chennai Express",
+      "actorAge": 50,
+      "actorId": 1522857682177,
+      "actorName": "GohulRaj"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522857481278.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "93812xxxxx",
+      "actorMovies": "Vettaikaran, Naan Kadavul, Nanban",
+      "actorAge": 50,
+      "actorId": 1522857481278,
+      "actorName": "Deena Dayalan"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522599309023.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "90032xxxxx",
+      "actorMovies": "Veera ",
+      "actorAge": 25,
+      "actorId": 1522599309023,
+      "actorName": "Kanna Ravi "
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522598959543.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "98943xxxxx",
+      "actorMovies": "Kashmora, Dheeran, Kee, Echcharikkai",
+      "actorAge": 45,
+      "actorId": 1522598959543,
+      "actorName": "Rajan iyer"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522642403240.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "98403xxxxx",
+      "actorMovies": "Onaayum Aattukuttiyum, Maanagaram, Kirumi",
+      "actorAge": 45,
+      "actorId": 1522642403240,
+      "actorName": "Ravi"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522641072860.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "98413xxxxx",
+      "actorMovies": "Kullanari Koottam",
+      "actorAge": 35,
+      "actorId": 1522641072860,
+      "actorName": "Ramesh Kumar"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522857392319.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "94423xxxxx",
+      "actorMovies": "-",
+      "actorAge": 50,
+      "actorId": 1522857392319,
+      "actorName": "Ashok Pandian"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522598706243.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "91766xxxxx",
+      "actorMovies": "Naduvula konja Pakkatha Kaanum",
+      "actorAge": 35,
+      "actorId": 1522598706243,
+      "actorName": "Bagavathy "
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522856526497.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "94443xxxxx",
+      "actorMovies": "Boss Engira Baskaran, Unnai Ninaithu, Japanil Kalyana Raman",
+      "actorAge": 45,
+      "actorId": 1522856526497,
+      "actorName": "Chitra Lakshmanan"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522856860898.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "94444xxxxx",
+      "actorMovies": "Kalakalappu, Aandavan Kattalai, Spyder",
+      "actorAge": 50,
+      "actorId": 1522856860898,
+      "actorName": "George Mariyan"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522597945264.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "98412xxxxx",
+      "actorAge": 45,
+      "actorId": 1522597945264,
+      "actorName": "Balraj"
+    },
+    {
+      "actorContactConsent": true,
+      "actorPhoto": "https://s3.ap-south-1.amazonaws.com/cloud.actorsdirectory.online/assets/ActorPhotos/1522642464260.jpeg",
+      "actorGender": "male",
+      "actorContactNumber": "98406xxxxx",
+      "actorMovies": "Amara Kaviyam, Yeman",
+      "actorAge": 45,
+      "actorId": 1522642464260,
+      "actorName": "Aroul Djody"
+    }
+  ],
+  "Count": 56,
+  "ScannedCount": 56
+}
+
