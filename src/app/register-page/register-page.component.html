@@ -86,6 +86,7 @@
       <div class="col-md-5">
           <div class="form-group" style="margin:12%;">
               <label for="photos">Photos*:</label>
+              <i class="small"> <br> Please upload image of size 500px*500px</i>
               <input type="file" (change)="uploadFiles($event)" 
               accept="image/jpeg" class="btn btn-default" id="photos" required #fileUpload>
               <button (click)="showUploadWindow(fileUpload)">Upload files</button>
