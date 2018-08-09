@@ -1,31 +1,39 @@
 <div class="row">
   <div class="col-md-5">
-  <img class="actor-profiles" src="{{actor.actorPhoto}}" alt="https://d36y8zwkr1oyb.cloudfront.net/assets/ActorPhotos/1522597550087.jpeg">
+  <img class="actor-profiles img-thumbnail" src="{{actor.actorPhoto}}" alt="https://d36y8zwkr1oyb.cloudfront.net/assets/ActorPhotos/1522597550087.jpeg">
   </div>
   <fieldset>
-    <legend class="details">Actor details</legend>
+    <legend class="text-center">Actor details</legend>
     <div class="col-md-5 actor-profiles actor-details">
-      <p>
-        <span class="specifications">Name :</span>
-        <span class="details">{{actor.actorName}}</span>
-      </p>
-      <p>
-        <span class="specifications">Age :</span>
-        <span class="details">{{actor.actorAge}}</span>
-      </p>
-      <p>
-        <span class="specifications">Gender :</span>
-        <span class="details">{{actor.actorGender}}</span>
-      </p>
-      <p>
-        <span class="specifications">Number :</span>
-        <span class="details">{{actor.actorContactNumber}}</span>
-        <i class="fa fa-envelope pointer" title= "Contact actor" aria-hidden="true" (click)="showMessageScreen=true"></i>
-      </p>
-      <p>
-        <span class="specifications">Movies :</span>
-        <span class="details">{{actor.actorMovies}}</span>
-      </p>
+      <table>
+          <tr>
+              <td class="specifications">Name </td>
+              <td class="specifications">: </td>
+              <td span class="details">{{actor.actorName}}</td>
+          </tr>  
+          <tr>
+              <td class="specifications">Age </td>
+              <td class="specifications">: </td>
+              <td span class="details">{{actor.actorAge}}</td>
+          </tr>  
+          <tr>
+              <td class="specifications">Gender </td>
+              <td class="specifications">: </td>
+              <td span class="details">{{actor.actorGender.toUpperCase()}}</td>
+          </tr>  
+          <tr>
+              <td class="specifications">Number </td>
+              <td class="specifications">: </td>
+              <td span class="details">{{actor.actorContactNumber}}
+                  <i class="fa fa-envelope pointer" title= "Contact actor" aria-hidden="true" (click)="showMessageScreen=true"></i>
+              </td>
+          </tr>  
+          <tr>
+              <td class="specifications">Movies </td>
+              <td class="specifications">: </td>
+              <td span class="details">{{actor.actorMovies}}</td>
+          </tr>  
+      </table>
      </div>
   </fieldset>
   <app-message-screen *ngIf="showMessageScreen">

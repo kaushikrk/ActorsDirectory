@@ -1,12 +1,15 @@
-.actor-profiles {
-    width:300px;
+ @media only screen and (min-width: 900px){
+    .actor-profiles  {
+        position:relative;
+        top: 50px;
+    }
+}
+.img-scaling{
     height:300px;
-    position:relative;
-    left:100px;
-    top: 50px;
+    width: 300px;
 }
 .actor-details {
-    color:#cc6600;
+    
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     position:relative;
@@ -14,14 +17,14 @@
     top: 20px;
 }
 .specifications {
-    color: #cc6600;
+    
     padding:10px; 
     font-family: Helvetica, sans-serif;
     font-weight: 300;
 }
 .details {
-    color:#cc6600;
-    padding:10px; 
+    
+    padding:15px; 
     font-family: Helvetica, sans-serif;
     font-weight: 300;
     font-style: italic; 

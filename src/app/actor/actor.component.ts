@@ -1,6 +1,6 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { ActorService } from '../actor.service';
-import { ActorModel } from '../Actor.model';
+import {ActorModel } from '../Actor.model';
 
 @Component({
   selector: 'app-actor',

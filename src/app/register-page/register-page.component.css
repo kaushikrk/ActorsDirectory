@@ -6,11 +6,9 @@
 .submit-btn{
     width:150px;
     height:30px;
-    background: linear-gradient( #3f3f3f,black);
     border:none;
 }
 .submit-btn:hover {
-    background: linear-gradient( #3f3f3f,black);
     border:none;
 }
 .invalid{
