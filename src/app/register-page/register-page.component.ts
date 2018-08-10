@@ -23,17 +23,18 @@ export class RegisterPageComponent implements OnInit {
   uploadFiles(event) {
   this.failureMessage=undefined;
   this.successMessage=undefined;
-  const files = event.srcElement.files;
+  const files = event.files;
   const me = this;
   const regEx = '/Image\*'
   if (files.length >0) {
       for (let file of files) {
-        if(file.size > 2000000){
+        if(file.size > 1000000){
           this.failureMessage='Please upload a file smaller than 2MB.'
         } else{
           me.profilePhotos = file;
           let reader = new FileReader();
           reader.onload =function (file) {
+                console.log(file);
                 me.previewsrc=reader.result;
            };      
           reader.readAsDataURL(file);
@@ -62,5 +63,5 @@ export class RegisterPageComponent implements OnInit {
     }
     showUploadWindow(fileUpload){
       fileUpload.click();
-    }
+    } 
   }

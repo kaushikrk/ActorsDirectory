@@ -82,14 +82,14 @@
       </form>
     </fieldset>
   </div>
-  <div class="row col-md-5 pull-right">
-      <div class="col-md-5">
+  <div class="row col-md-7 pull-right">
+      <div class="col-md-7">
           <div class="form-group" style="margin:12%;">
-              <label for="photos">Photos*:</label>
+              <p-fileUpload mode= "basic" name="photos" 
+              url="" accept="image/*" 
+              maxFileSize="1000000" (onSelect)="uploadFiles($event)" 
+               chooseLabel="Upload your photos"></p-fileUpload>
               <i class="small"> <br> Please upload image of size 500px*500px</i>
-              <input type="file" (change)="uploadFiles($event)" 
-              accept="image/jpeg" class="btn btn-default" id="photos" required #fileUpload>
-              <button (click)="showUploadWindow(fileUpload)">Upload files</button>
           </div>
       </div>
   </div>
