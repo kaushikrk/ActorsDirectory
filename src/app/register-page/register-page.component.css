@@ -1,8 +1,4 @@
 .preview{
-    height: auto; 
-    width: auto; 
-    max-width: 300px; 
-    max-height: 300px;
     padding:3%;
 }
 .submit-btn{

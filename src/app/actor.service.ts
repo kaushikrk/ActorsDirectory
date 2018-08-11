@@ -21,7 +21,7 @@ export class ActorService {
 
     }
     getActorsList(): Observable<any> {
-    return this.http.get('https://2e49lds24e.execute-api.ap-south-1.amazonaws.com/prod/getAllActors');
+    return this.http.get('https://2e49lds24e.execute-api.ap-south-1.amazonaws.com/prod/getAllActors?profileType=Actors');
     // return this.http.get('../assets/actors.json');
     }
     saveActor(data): Observable<any>{
