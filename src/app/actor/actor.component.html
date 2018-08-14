@@ -6,13 +6,13 @@
   </fieldset>
 </div>
 <div class="row">
-  <div *ngFor="let actor of actorsList" class="col-md-4 col-sm-2">
-      <img routerLink="/actor-details"  (click)="loadProfile(actor)" 
-      class="grid-view img-thumbnail" src="{{actor.actorPhoto}}"  alt="{{actor.actorPhoto}}">
-      <span>
-          <a routerLink="/actor-details" (click)="loadProfile(actor)"
-          style="position:relative;left:3%;">{{actor.actorName}}</a>
-      </span>
-      
+  <div *ngFor="let actor of actorsList" class="col-md-2 col-sm-2">
+    <div class="thumbnail">
+          <img routerLink="/actor-details"  (click)="loadProfile(actor)" 
+          class="grid-view" src="{{actor.actorPhoto}}"  alt="{{actor.actorPhoto}}">
+          <div class="caption text-center">
+              <a routerLink="/actor-details" class="text-center" (click)="loadProfile(actor)">{{actor.actorName}}</a>
+          </div>
+    </div>
   </div>
 </div>

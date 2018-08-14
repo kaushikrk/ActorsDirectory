@@ -1,8 +1,28 @@
-.page-header{
-    background-color: #990000;
-    color:white;
+.header-content{
+    background-color: white;
+    color:#222; 
+    
 }
-.brand-name{
-    position:relative;
-    top:10px;
+.brand-name-size{
+    font-size:30px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+.no-border{
+    border: none;
+}
+.nav > li > a{
+    color: white;
+}
+.nav > li > a:focus 
+    {
+        background-color: #222;
+        border-bottom-color: whitesmoke;
+        border-bottom-width: 2px; 
+    }
+    .nav > li > a:hover
+    {
+        background-color: rgb(103, 103, 103);
+        border-bottom-color: whitesmoke;
+        border-bottom-width: 2px; 
+    }
+ 
