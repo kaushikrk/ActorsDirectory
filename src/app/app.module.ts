@@ -16,7 +16,8 @@ import { AuditionpageComponent } from './Auditions/auditionpage/auditionpage.com
 import { AuditionFormComponent } from './Auditions/audition-form/audition-form.component';
 import { AuditionService } from './audition.service';
 import { MessageScreenComponent } from './message-screen/message-screen.component';
-
+import {RatingModule} from 'primeng/rating';
+import {InputTextareaModule} from 'primeng/inputtextarea';
 const routes = [
   { path: '', redirectTo: '/actors', pathMatch: 'full' },
   {path: 'actors', component: ActorComponent},
@@ -45,7 +46,9 @@ const routes = [
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
-    FileUploadModule
+    FileUploadModule,
+    RatingModule,
+    InputTextareaModule
   ],
   providers: [ActorService,AuditionService],
   bootstrap: [AppComponent]
