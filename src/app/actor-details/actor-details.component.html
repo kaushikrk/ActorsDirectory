@@ -19,7 +19,10 @@
           <tr>
               <td class="specifications">Gender </td>
               <td class="specifications">: </td>
-              <td span class="details">{{actor.actorGender.toUpperCase()}} <i class="fa fa-mars" aria-hidden="true"></i></td>
+              <td span class="details">{{actor.actorGender.toUpperCase()}} 
+                  <i *ngIf= "actor.actorGender=='male'"class="fa fa-mars" aria-hidden="true"></i>
+                  <i *ngIf= "actor.actorGender=='female'"class="fa fa-venus" aria-hidden="true"></i>
+                </td>
           </tr>  
           <tr>
               <td class="specifications">Number </td>
