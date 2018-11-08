@@ -18,6 +18,7 @@ import { AuditionService } from './audition.service';
 import { MessageScreenComponent } from './message-screen/message-screen.component';
 import {RatingModule} from 'primeng/rating';
 import {InputTextareaModule} from 'primeng/inputtextarea';
+import { PhotographerComponent } from './photographer/photographer.component';
 const routes = [
   { path: '', redirectTo: '/actors', pathMatch: 'full' },
   {path: 'actors', component: ActorComponent},
@@ -25,7 +26,7 @@ const routes = [
   {path: 'actor-details', component: ActorDetailsComponent},
   {path: 'signup', component: RegisterPageComponent} ,
   {path: 'login', component: LoginComponentComponent},
-  {path: 'photographers', component: InProgressComponent},
+  {path: 'photographers', component: PhotographerComponent},
   {path: 'locations', component: InProgressComponent}
 ];
 @NgModule({
@@ -33,6 +34,7 @@ const routes = [
     AppComponent,
     MenuBarComponent,
     ActorComponent,
+    PhotographerComponent,
     ActorDetailsComponent,
     RegisterPageComponent,
     LoginComponentComponent,

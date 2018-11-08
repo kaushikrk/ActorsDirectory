@@ -27,4 +27,7 @@ export class ActorService {
     saveActor(data): Observable<any>{
         return this.http.post('https://2e49lds24e.execute-api.ap-south-1.amazonaws.com/prod/saveProfile',data);
     }
+    postComment(data):Observable<any>{
+        return this.http.post('',data);
+    }
 }

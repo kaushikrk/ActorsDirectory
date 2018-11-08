@@ -19,25 +19,26 @@
           <tr>
               <td class="specifications">Gender </td>
               <td class="specifications">: </td>
-              <td span class="details">{{actor.actorGender.toUpperCase()}}</td>
+              <td span class="details">{{actor.actorGender.toUpperCase()}} <i class="fa fa-mars" aria-hidden="true"></i></td>
           </tr>  
           <tr>
               <td class="specifications">Number </td>
               <td class="specifications">: </td>
-              <td span class="details">{{actor.actorContactNumber}}
+              <td span *ngIf="loggedIn" class="details">{{actor.actorContactNumber}}
                   <!-- <i class="fa fa-envelope pointer" title= "Contact actor" aria-hidden="true" (click)="showMessageScreen=true"></i> -->
               </td>
+              <td span *ngIf="!loggedIn" class="details">Premium<i class="fa fa-lock" aria-hidden="true"></i>    
           </tr>
           <tr>
             <td class="specifications">Profile </td>
             <td class="specifications">: </td>
             <td span class="details">Actor</td>
         </tr>  
-          <!-- <tr>
+          <tr>
               <td class="specifications">Movies </td>
               <td class="specifications">: </td>
               <td span class="details">{{actor.actorMovies}}</td>
-          </tr>   -->
+          </tr>  
       </table>
      </div>
   </fieldset>
@@ -54,14 +55,14 @@
     </div>
   </app-message-screen>
 </div>
-<div class="row">
+<!-- <div class="row">
     <div class="col-md-10" style="margin: 5%;">
         <div class="form-group">
             <label for="comment">Comment:</label>
-            <textarea class="form-control" rows="5" id="comment"></textarea>
+            <textarea #comment class="form-control" rows="5" id="comment"></textarea>
           </div>
           <div class="form-group">
-            <button class="btn btn-primary pull-right">Submit</button>
+            <button class="btn btn-primary pull-right" (click)="submitComment(comment)">Submit</button>
           </div>
     </div>
-</div>
+</div> -->
