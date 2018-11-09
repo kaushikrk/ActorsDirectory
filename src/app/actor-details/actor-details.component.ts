@@ -9,6 +9,7 @@ import { ActorModel } from '../Actor.model';
 export class ActorDetailsComponent implements OnInit, DoCheck, AfterViewInit {
 
   public actor: any ;
+  public loggedIn:Boolean= false;
   public movies :String[] =[];
   public showMessageScreen:boolean = false;
   constructor(private actorService: ActorService) {

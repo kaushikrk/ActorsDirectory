@@ -6,7 +6,7 @@
   </fieldset>
 </div>
 <div class="row">
-  <div *ngFor="let actor of actorsList" class="col-md-2 col-sm-2">
+  <div *ngFor="let actor of currentList" class="col-md-2 col-sm-2">
     <div class="thumbnail">
           <img routerLink="/actor-details"  (click)="loadProfile(actor)" 
           class="grid-view" src="{{actor.actorPhoto}}"  alt="{{actor.actorPhoto}}">
@@ -15,4 +15,9 @@
           </div>
     </div>
   </div>
+</div>
+<div class="col-md-offset-6">
+    <ul class="pagination pagination-lg">
+        <li *ngFor="let pageNumber of totalPage" (click)="onPageClick(pageNumber)"><a>{{pageNumber}}</a></li>
+      </ul>
 </div>

@@ -1,11 +1,13 @@
 .header-content{
-    background-color: white;
     color:#222; 
     
 }
 .brand-name-size{
     font-size:30px;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:Roboto, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: #996600;
+    color:#ffc34d;
+    border-color:#996600;
 }
 .no-border{
     border: none;
@@ -15,13 +17,13 @@
 }
 .nav > li > a:focus 
     {
-        background-color: #222;
+        background-color: #cc8800;
         border-bottom-color: whitesmoke;
         border-bottom-width: 2px; 
     }
     .nav > li > a:hover
     {
-        background-color: rgb(103, 103, 103);
+        background-color: #cc8800;
         border-bottom-color: whitesmoke;
         border-bottom-width: 2px; 
     }

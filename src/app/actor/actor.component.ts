@@ -9,6 +9,9 @@ import {ActorModel } from '../Actor.model';
 })
 export class ActorComponent implements OnInit {
   searchboxVisible = false;
+  currentPage:Number=1;
+  totalPage:any=[];
+  currentList:ActorModel[] =[];
   actorsList:ActorModel[] = [];
   sourceList:ActorModel[] = [];
   constructor(private actorService: ActorService) { }
@@ -16,7 +19,18 @@ export class ActorComponent implements OnInit {
   ngOnInit() {
     this.actorService.getActorsList().subscribe(data => {
       this.actorsList=data.Items;
-      this.sourceList=data.Items;  
+      this.sourceList=data.Items;
+      let pages= data.Items.length/18;
+      for(let i=0;i<=pages;i++){
+        let k=i;
+        this.totalPage.push(++k);
+      }
+      if(data.Items.length >17)  {
+        this.currentList=data.Items.slice(0,17);
+      }
+      else{
+        this.currentList=data.Items;
+      }
       }
     );
   }
@@ -40,5 +54,10 @@ export class ActorComponent implements OnInit {
       }
       
     }
+  }
+  onPageClick(pageNumber:any){
+    let pgN= parseInt(pageNumber);
+    let sliceStart=(pgN-1)*18;
+    this.currentList=this.actorsList.slice(sliceStart,sliceStart+18);
   }
 }

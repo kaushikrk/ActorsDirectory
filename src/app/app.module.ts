@@ -19,8 +19,10 @@ import { MessageScreenComponent } from './message-screen/message-screen.componen
 import {RatingModule} from 'primeng/rating';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import { PhotographerComponent } from './photographer/photographer.component';
+import { HomeComponent } from './home/home.component';
 const routes = [
-  { path: '', redirectTo: '/actors', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  {path: 'home', component: HomeComponent},
   {path: 'actors', component: ActorComponent},
   {path: 'auditions', component: AuditionpageComponent},
   {path: 'actor-details', component: ActorDetailsComponent},
@@ -41,7 +43,8 @@ const routes = [
     InProgressComponent,
     AuditionpageComponent,
     AuditionFormComponent,
-    MessageScreenComponent
+    MessageScreenComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
