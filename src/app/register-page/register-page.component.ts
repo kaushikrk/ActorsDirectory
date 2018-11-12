@@ -11,7 +11,7 @@ import { ActorModel } from '../Actor.model';
 export class RegisterPageComponent implements OnInit {
   successMessage:boolean = false;
   failureMessage:string ;
-  previewsrc: any= {};
+  previewsrc: any= "";
   newActor: ActorModel = new ActorModel();
   profilePhotos:any = {};
   @ViewChild('userForm') userForm: FormGroup;
@@ -57,7 +57,7 @@ export class RegisterPageComponent implements OnInit {
         }
         else {
         this.successMessage=false;
-        this.failureMessage=data.status.message;
+        this.failureMessage=data.err;
         }
       });
     }

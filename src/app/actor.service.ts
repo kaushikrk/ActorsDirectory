@@ -1,6 +1,7 @@
 import { Injectable, Output, EventEmitter } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
+import { URLConfig } from './URLConfig';
 
 export interface Actor {
     actorName: string;
@@ -15,17 +16,17 @@ export class ActorService {
 
     public loadDetails: EventEmitter<any> = new EventEmitter<any>();
     data = {};
+    urlConfigs={};
 
     // Observable string streams
     constructor(private http: HttpClient) {
-
     }
     getActorsList(): Observable<any> {
-    return this.http.get('https://2e49lds24e.execute-api.ap-south-1.amazonaws.com/prod/getAllActors?profileType=Actor');
+    return this.http.get<Actor>(URLConfig.getActors);
     // return this.http.get('../assets/actors.json');
     }
     saveActor(data): Observable<any>{
-        return this.http.post('https://2e49lds24e.execute-api.ap-south-1.amazonaws.com/prod/saveProfile',data);
+        return this.http.post(URLConfig.postActor,data);
     }
     postComment(data):Observable<any>{
         return this.http.post('',data);
