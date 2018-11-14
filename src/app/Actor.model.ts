@@ -14,6 +14,7 @@ export class ActorModel {
     public rating: String
     public actorContactConsent:boolean;
     public actorFiltered:boolean;
+    public actorLocation:string;
     constructor() {
     }
 }

@@ -1,24 +1,25 @@
 <div class="container-fluid">
   <p class="form-title text-center">SEARCH FOR YOUR CAST</p>
-  <form action="" class="form-horizontal">
+  <form action="" class="form-inline form-group" [formGroup]="searchForm">
     <div class="col-md-offset-2 col-md-8 custom-form" >
       <p></p>
-        <select class="col-md-offset-1 input-lg">
+        <select class="col-md-offset-1 input-lg" formControlName="profile">
           <option value="actor">Actor</option>
           <option value="photographer">Photographer</option>
         </select>
-        <select class="input-lg">
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
+        <select class="input-lg" formControlName="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
           </select>
         <b>in</b>
-        <select class="input-lg margin-2">
+        <select class="input-lg margin-2" formControlName="location">
             <option value="Chennai">Chennai</option>
             <option value="Hyderabad">Hyderabad</option>
         </select>
-        <button class="btn btn-lg btn-default search-btn" routerLink="/actors">Search
+        <button class="btn btn-lg btn-default search-btn" (click)="onSearch()">Search
             <i class="fa fa-search" aria-hidden="true"></i>
         </button>
     </div>
   </form>
 </div>
+<app-message-screen *ngIf="showLoading"></app-message-screen>

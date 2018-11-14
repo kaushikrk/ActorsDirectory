@@ -1,6 +1,7 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { ActorService } from '../actor.service';
 import {ActorModel } from '../Actor.model';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-actor',
@@ -14,26 +15,37 @@ export class ActorComponent implements OnInit {
   currentList:ActorModel[] =[];
   actorsList:ActorModel[] = [];
   sourceList:ActorModel[] = [];
+  searchResultsubscription:Subscription;
   constructor(private actorService: ActorService) { }
 
   ngOnInit() {
-    this.actorService.getActorsList().subscribe(data => {
-      this.actorsList=data.Items;
-      this.sourceList=data.Items;
-      let pages= data.Items.length/18;
-      for(let i=0;i<=pages;i++){
-        let k=i;
-        this.totalPage.push(++k);
+    let data;
+    this.actorService.getActorsList().subscribe(res=>{
+      data=res;
+      if(data.Items){
+        this.loadResults(data);
       }
-      if(data.Items.length >17)  {
-        this.currentList=data.Items.slice(0,17);
-      }
-      else{
-        this.currentList=data.Items;
-      }
-      }
-    );
+    });
   }
+  ngAfterViewInit(){
+    
+  }
+  private loadResults(data: any) {
+    this.actorsList = data.Items;
+    this.sourceList = data.Items;
+    let pages = data.Items.length / 18;
+    for (let i = 0; i <= pages; i++) {
+      let k = i;
+      this.totalPage.push(++k);
+    }
+    if (data.Items.length >= 17) {
+      this.currentList = data.Items.slice(0, 18);
+    }
+    else {
+      this.currentList = data.Items;
+    }
+  }
+
   loadProfile(actor) {
     console.log(actor);
     this.actorService.data = actor;
@@ -59,5 +71,8 @@ export class ActorComponent implements OnInit {
     let pgN= parseInt(pageNumber);
     let sliceStart=(pgN-1)*18;
     this.currentList=this.actorsList.slice(sliceStart,sliceStart+18);
+  }
+  ngOnDestroy(){
+    console.log("destroying list");
   }
 }
