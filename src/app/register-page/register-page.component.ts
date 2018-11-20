@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { ActorService } from '../actor.service';
 import { ActorModel } from '../Actor.model';
+import { Configuration } from '../common/config.component';
 
 @Component({
   selector: 'app-register-page',
@@ -14,11 +15,17 @@ export class RegisterPageComponent implements OnInit {
   previewsrc: any= "";
   newActor: ActorModel = new ActorModel();
   profilePhotos:any = {};
+  profileTypes:String[]=[];
+  cities:String[];
   @ViewChild('userForm') userForm: FormGroup;
+  private readonly ;
+
   constructor(public actorService: ActorService) { }
 
   ngOnInit() {
-    
+    let config=new Configuration();
+    this.profileTypes=config.profileType;
+    this.cities=config.cities;
   }
   uploadFiles(event) {
   this.failureMessage=undefined;
@@ -49,7 +56,9 @@ export class RegisterPageComponent implements OnInit {
       this.newActor.actorPhoto = blob;
       this.newActor.actorId= this.newActor.actorContactNumber;
       console.log(this.newActor);
+      this.actorService.showLoadingScreen(true);
       this.actorService.saveActor(this.newActor).subscribe((data:any) => {
+      this.actorService.showLoadingScreen(false);
         if(data.success){
         this.successMessage=true;
         this.failureMessage = undefined;

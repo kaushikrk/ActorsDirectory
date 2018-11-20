@@ -20,9 +20,8 @@
     top: 20px;
 }
 .specifications {
-    
-    padding:10px; 
-    font-family: Helvetica, sans-serif;
+    font-size: 120%; 
+    font-family: Roboto,Helvetica, sans-serif;
     font-weight: 300;
 }
 .details {
@@ -33,13 +32,17 @@
     font-style: italic; 
 }
 .pointer {cursor: pointer;}
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    position:inherit;
-    top:25%;
-    left:10%;
+.movies{
+    background-color: #ff0000;
+    border-radius:10%;
+    color: antiquewhite;
+    padding: 3%;
+    margin: 3%;
+}
+
+:host ::ng-deep .login-margin{
+    margin: 5%;
+}
+div {
+    color: #ffc34d;
 }

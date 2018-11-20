@@ -3,7 +3,12 @@ export class  URLConfig {
     private static prodHostName="http://actorsdirectory.azurewebsites.net";
     public static  getActors= URLConfig.getHostName()+"/actors";
     public static  postActor=URLConfig.getHostName()+"/actors";
+    public static  comments=URLConfig.getHostName()+"/actors/comments";
+
     static getHostName(){
-      return this.devHostName;
+      return this.prodHostName;
+    }
+    static getCommentsURL(actorId:any) : string{
+      return this.getActors+"/"+actorId+"/comments";
     }
 }

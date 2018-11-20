@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, Input } from '@angular/core';
 import { ActorService } from '../actor.service';
 import {ActorModel } from '../Actor.model';
 import { Subscription } from 'rxjs/Subscription';
@@ -9,8 +9,10 @@ import { Subscription } from 'rxjs/Subscription';
   styleUrls: ['./actor.component.css'],
 })
 export class ActorComponent implements OnInit {
+  @Input() searchQuery:any;
   searchboxVisible = false;
   currentPage:Number=1;
+  noResultsFound:boolean=false;
   totalPage:any=[];
   currentList:ActorModel[] =[];
   actorsList:ActorModel[] = [];
@@ -20,15 +22,26 @@ export class ActorComponent implements OnInit {
 
   ngOnInit() {
     let data;
-    this.actorService.getActorsList().subscribe(res=>{
-      data=res;
-      if(data.Items){
-        this.loadResults(data);
-      }
-    });
+    console.log(this.searchQuery);
+    if(this.actorService.getActorsList()){
+      this.actorService.getActorsList().subscribe(res=>{
+        data=res;
+        if(data.Items && data.Items.length>0){
+          this.loadResults(data);
+          this.actorService.cachedList=data;
+          this.actorService.showLoadingScreen(false);
+        } else{
+          this.actorService.showLoadingScreen(false);
+          this.noResultsFound=true;
+        }
+      });  
+    }
+    else{
+      this.loadResults(this.actorService.cachedList);
+      this.actorService.showLoadingScreen(false);
+    }
   }
-  ngAfterViewInit(){
-    
+  ngAfterContentChecked(){
   }
   private loadResults(data: any) {
     this.actorsList = data.Items;
@@ -61,16 +74,17 @@ export class ActorComponent implements OnInit {
         this.actorsList = this.sourceList
         .filter((actor: ActorModel) => actor.actorAge >= filterValue);
       } else{
-        this.actorsList = this.actorsList
+        this.actorsList = this.sourceList
         .filter((actor: ActorModel) => actor.actorName === filterValue);
       }
       
     }
   }
-  onPageClick(pageNumber:any){
+  onPageClick(pageNumber:any,event:any){
     let pgN= parseInt(pageNumber);
     let sliceStart=(pgN-1)*18;
     this.currentList=this.actorsList.slice(sliceStart,sliceStart+18);
+    // event.currentTarget.classList.add("active");
   }
   ngOnDestroy(){
     console.log("destroying list");

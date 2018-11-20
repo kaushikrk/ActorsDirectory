@@ -1,36 +1,20 @@
-<div class="container-fluid">
-  <div class="row" style="background-color: #996600">
-    <a routerLink="/home" class="btn btn-lg brand-name-size">
-      <i class="fa fa-quote-left" aria-hidden="true"></i>
-      Casting Company
-      <i class="fa fa-quote-right" aria-hidden="true"></i>
-    </a>
-    <!-- <button class="btn btn-sm btn-link no-border header-content text-justify pull-right">Sign up</button> -->
-  </div>
-</div>
-<nav class="navbar navbar-inverse navbar-static-top" style="background-color: #996600" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" style="background-color: #996600;border-color: #996600;" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                      <span class="sr-only">Toggle navigation</span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                  </button>
-      </div>
-  
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse"  id="bs-example-navbar-collapse-1">
-        <ul class="nav nav-justified ">
-            <li class="menu-hover"><a routerLink="/actors">Actors</a></li>
-            <li><a routerLink="/photographers">Photographers</a></li>
-            <li><a href="#">Choreographers</a></li>
-            <li><a href="#">Singers</a></li>
-            <li><a href="#">Editors</a></li>
-            <li><a href="#">Technicians</a></li>
-            <li><a routerLink="/signup">Register</a></li>
-        </ul>
-      </div>
+<app-message-screen *ngIf="showLoading" class="layer2">
+  <div></div>
+</app-message-screen>
+<div>
+  <div class="container-fluid">
+    <div class="row" style="background-color: #333333">
+      <a routerLink="/home" class="btn btn-lg brand-name-size">
+        <i class="fa fa-quote-left" aria-hidden="true"></i>
+        Casting Company
+        <i class="fa fa-quote-right" aria-hidden="true"></i>
+      </a>
+      <a class="pull-right register"  routerLink="/signup">Signup
+        <i class="fa fa-user-plus"></i>
+      </a>
+      <!-- <button class="btn btn-sm btn-link no-border header-content text-justify pull-right">Sign up</button> -->
     </div>
-  </nav>
-<router-outlet></router-outlet>
+  </div>
+  <hr>
+  <router-outlet></router-outlet>  
+</div>

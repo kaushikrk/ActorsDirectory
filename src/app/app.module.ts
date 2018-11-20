@@ -25,7 +25,7 @@ const routes = [
   {path: 'home', component: HomeComponent},
   {path: 'actors', component: ActorComponent},
   {path: 'auditions', component: AuditionpageComponent},
-  {path: 'actor-details', component: ActorDetailsComponent},
+  {path: 'actor-details/:actorId', component: ActorDetailsComponent},
   {path: 'signup', component: RegisterPageComponent} ,
   {path: 'login', component: LoginComponentComponent},
   {path: 'photographers', component: PhotographerComponent},

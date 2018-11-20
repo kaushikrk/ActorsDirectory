@@ -15,6 +15,8 @@ export class ActorModel {
     public actorContactConsent:boolean;
     public actorFiltered:boolean;
     public actorLocation:string;
+    public Languages:string[];
+    public movieUrl:String;
     constructor() {
     }
 }
