@@ -1,7 +1,7 @@
 import { Component, OnInit, ElementRef, Input } from '@angular/core';
 import { ActorService } from '../actor.service';
 import {ActorModel } from '../Actor.model';
-import { Subscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-actor',

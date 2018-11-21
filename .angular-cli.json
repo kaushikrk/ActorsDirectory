@@ -19,11 +19,11 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css",
-        "../node_modules/bootstrap/dist/css/bootstrap.css",
-        "../node_modules/font-awesome/css/font-awesome.min.css",
-        "../node_modules/primeng/resources/primeng.min.css",
-        "../node_modules/primeng/resources/themes/darkness/theme.css"
+        "src/styles.css",
+        "node_modules/bootstrap/dist/css/bootstrap.css",
+        "node_modules/font-awesome/css/font-awesome.min.css",
+        "node_modules/primeng/resources/primeng.min.css",
+        "node_modules/primeng/resources/themes/darkness/theme.css"
       ],
       "scripts": ["../node_modules/aws-sdk/dist/aws-sdk.min.js"],
       "environmentSource": "environments/environment.ts",

@@ -6,3 +6,6 @@
 .grid-image-block > * {
     
 }
+:host ::ng-deep .image-background{
+    background-color: #333333;
+}

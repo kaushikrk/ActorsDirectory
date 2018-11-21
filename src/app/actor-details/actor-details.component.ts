@@ -1,4 +1,4 @@
-import { Component, OnInit, DoCheck, AfterViewInit} from '@angular/core';
+import { Component, OnInit, DoCheck, AfterViewInit, ViewChild, ElementRef} from '@angular/core';
 import { ActorService } from '../actor.service';
 import { ActorModel } from '../Actor.model';
 import { OMDBResponse } from '../models/OMDBResponse';
@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ActorDetailsComponent implements OnInit,AfterViewInit {
 
-  
+  @ViewChild("comment") comment:ElementRef;
   userLoggedIn: boolean=true;
   public userName: any="";
   public actor: any ;
@@ -33,7 +33,8 @@ export class ActorDetailsComponent implements OnInit,AfterViewInit {
       let body = {
         "comment": comment.value,
         "actorId": this.actor.actorId,
-        "userName": this.userName
+        "userName": this.userName,
+        "commentedOn":new Date()
     };
     this.actorService.submitComment(body).subscribe(response=>{
       this.comments=response;
@@ -74,11 +75,21 @@ export class ActorDetailsComponent implements OnInit,AfterViewInit {
   }
   loadActorComments(): any {
     this.actorService.getComments(this.actor.actorId).subscribe(comments=>{
+      comments.forEach(element => {
+        if(element.commentedOn){
+          let commentDate = new Date(element.commentedOn);
+          let day =commentDate.getDate();
+          let month =commentDate.getMonth();
+          let year =commentDate.getFullYear();
+          element.commentedOn=day+"/"+month+"/"+year;
+        }
+      });
       this.comments=comments;
     })
   }
   continueAsGuest(guesUserNameEl:any){
     this.userName=guesUserNameEl.value;
     this.userLoggedIn=true;
+    this.submitComment(this.comment.nativeElement);
   }
 }

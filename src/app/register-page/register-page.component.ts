@@ -10,6 +10,7 @@ import { Configuration } from '../common/config.component';
   styleUrls: ['./register-page.component.css']
 })
 export class RegisterPageComponent implements OnInit {
+  genderTypes: string[]=[];
   successMessage:boolean = false;
   failureMessage:string ;
   previewsrc: any= "";
@@ -26,6 +27,7 @@ export class RegisterPageComponent implements OnInit {
     let config=new Configuration();
     this.profileTypes=config.profileType;
     this.cities=config.cities;
+    this.genderTypes=config.gender;
   }
   uploadFiles(event) {
   this.failureMessage=undefined;

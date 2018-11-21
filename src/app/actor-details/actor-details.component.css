@@ -43,6 +43,13 @@
 :host ::ng-deep .login-margin{
     margin: 5%;
 }
-div {
-    color: #ffc34d;
+:host ::ng-deep .comment-backgroud{
+    background-color: #333;
+}
+:host ::ng-deep .comment-header{
+    background-color: #ffb82c;
+    color:white;
+}
+:host ::ng-deep .comment-box{
+    color: #ffb82c;
 }

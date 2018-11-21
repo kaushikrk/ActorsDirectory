@@ -7,39 +7,37 @@
           <strong>Oops!</strong> {{failureMessage}}.
         </div>
   <div class="col-md-5">
-    <p>Register</p>
+    <!-- <p class="register-title">Register</p> -->
     <fieldset>
-      <Legend>Register with us</Legend>
+      <Legend class="dropdown">Register with us</Legend>
       <form #userForm="ngForm">
         <div class="form-group">
           <label for="name">Name*:</label>
-          <input type="text" class="form-control" id="name" name="name" #name="ngModel"
+          <input type="text" class="form-control dropdown" id="name" name="name" #name="ngModel"
           required minlength="3" pattern="^[a-zA-Z\s]*$" [(ngModel)]="newActor.actorName">
         </div>
         <div class="form-group">
             <label for="age">Age*:</label>
-            <input type="number" class="form-control" pattern="^[0-9]{1,2}" name="age" id="age" #age="ngModel" 
+            <input type="number" class="form-control dropdown" pattern="^[0-9]{1,2}" name="age" id="age" #age="ngModel" 
             required [(ngModel)]="newActor.actorAge">
           </div>
           <div class="form-group" id="gender">
               <label for="gender">Gender*:</label>
-              <select class="form-control" id="gender" name="gender" [(ngModel)]="newActor.actorGender" #gender ="ngModel"
+              <select class="form-control dropdown" id="gender" name="gender" [(ngModel)]="newActor.actorGender" #gender ="ngModel"
               required>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="others">Others</option>
+              <option class="dropdown" *ngFor="let type of genderTypes" value="{{type.toLowerCase()}}">{{type}}</option>
               </select>
             </div>
             <div class="form-group" id="profileType">
                     <label for="profileType">Profile*:</label>
-                    <select class="form-control" id="profileType" name="profileType" [(ngModel)]="newActor.profileType" #gender ="ngModel"
+                    <select class="form-control dropdown" id="profileType" name="profileType" [(ngModel)]="newActor.profileType" #gender ="ngModel"
                     required>
-                      <option *ngFor="let profile of profileTypes"value="{{profile.toLowerCase()}}">{{profile}}</option>
+                      <option class="dropdown" *ngFor="let profile of profileTypes"value="{{profile.toLowerCase()}}">{{profile}}</option>
                     </select>
                   </div>
             <div class="form-group">
                 <label for="movies">Movies/Plays:</label>
-                <input type="text" title="Movies you have worked on" class="form-control" id="movies" 
+                <input type="text" title="Movies you have worked on" class="form-control dropdown" id="movies" 
                 [(ngModel)]="newActor.actorMovies"
                 name="movies"
                 >
@@ -47,34 +45,34 @@
             </div>
             <div class="form-group" >
                     <label for="languages">Languages*:</label>
-                    <input type="text" title="Languages known." class="form-control" id="languages" 
+                    <input type="text" title="Languages known." class="form-control dropdown" id="languages" 
                     [(ngModel)]="newActor.Languages" required
                     name="languages"
                     >
             </div>
             <div class="form-group">
               <label for="Location">Location(address):</label>
-              <input type="text" title="City/Area name" #location class="form-control" id="Location" 
+              <input type="text" title="City/Area name" #location class="form-control dropdown" id="Location" 
               [(ngModel)]="newActor.actorLocation"
               maxlength="500" 
               name="Location">
       </div>
             <div class="form-group">
                     <label for="height">Height (in cm):</label>
-                    <input type="text" title="Height in cm" class="form-control" id="height" 
+                    <input type="text" title="Height in cm" class="form-control dropdown" id="height" 
                     [(ngModel)]="newActor.Height"
                     name="height"
                     >
             </div>
             <div class="form-group">
                     <label for="weight">Weight (in Kg):</label>
-                    <input type="text" title="Height in cm" class="form-control" id="weight" 
+                    <input type="text" title="Height in cm" class="form-control dropdown" id="weight" 
                     [(ngModel)]="newActor.Weight"
                     name="weight">
             </div>
             <div class="form-group">
               <label for="number">Contact Number*:</label>
-              <input type="number" class="form-control" pattern="^[0-9]{10}" required
+              <input type="number" class="form-control dropdown" pattern="^[0-9]{10}" required
                id="number" [(ngModel)]="newActor.actorContactNumber"
               name="number"
               >

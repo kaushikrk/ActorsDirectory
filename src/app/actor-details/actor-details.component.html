@@ -76,7 +76,7 @@
             </div>
             <div class="col-md-5">
                 <input class="form-control" type="text" required placeholder="Guest user name" #guestUserName>
-                <button [disabled]="guestUserName.invalid"class="btn btn-primary login-margin" (click)="continueAsGuest(guestUserName)">Continue</button>
+                <button [disabled]="guestUserName.invalid" class="btn btn-primary login-margin" (click)="continueAsGuest(guestUserName)">Continue</button>
             </div>
 
         </div>
@@ -97,7 +97,7 @@
     <div class="col-md-10" style="margin: 5%; ">
         <div class="form-group">
             <label for="comment">Comment:</label>
-            <textarea #comment class="form-control" rows="5" id="comment" style=" background-color:#333333;" placeholder="Enter your comments about this actor"></textarea>
+            <textarea #comment class="form-control comment-box" rows="5" id="comment" style=" background-color:#333333;" placeholder="Enter your comments about this actor"></textarea>
         </div>
         <div class="form-group">
             <button class="btn btn-primary pull-right" (click)="submitComment(comment)">Submit</button>
@@ -105,16 +105,24 @@
     </div>
 </div>
 <hr>
-<div class="row">
-    <div class="col-md-10" style="margin: 5%;">
-        <div class="form-group" >
-            <p class="panel panel-body" style="background-color:#333333;" *ngFor="let c of comments">
-                <span class="col-md-2">
-                    <i class="fa fa-user fa-3x" style="border:1px black;"></i>
-                    <p>{{c.userName}}</p>
-                </span>
-                <span class="col-md-8" style="font-family: Koho;font-size: 110%;">{{c.comment}}</span>
-            </p>
+<div class="row col-md-offset-1" *ngFor="let c of comments">
+    <div class="col-sm-1 col-md-1">
+        <div class="thumbnail">
+            <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
         </div>
     </div>
-</div>
+        <div class="col-sm-5 col-md-6">
+            <div class="panel panel-default comment-backgroud">
+                <div class="panel-heading comment-header">
+                    <strong>{{c.userName}}</strong>
+                    <span class="text-muted"> commented on</span>
+                    <span class="text-muted">{{c.commentedOn}}</span>
+                </div>
+                <div class="panel-body">
+                    {{c.comment}}
+                </div>
+                <!-- /panel-body -->
+            </div>
+            <!-- /panel panel-default -->
+        </div>
+    </div>

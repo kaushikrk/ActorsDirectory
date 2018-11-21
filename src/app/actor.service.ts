@@ -1,10 +1,9 @@
 import { Injectable, Output, EventEmitter } from '@angular/core';
 import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
 import { URLConfig } from './URLConfig';
 import { ActorModel } from './Actor.model';
 import { OMDBResponse } from './models/OMDBResponse';
-import 'rxjs/add/observable/forkJoin';
+import { Observable } from 'rxjs';
 
 export interface Result {
     Items: ActorModel[];
