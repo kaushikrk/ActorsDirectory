@@ -3,7 +3,8 @@ import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { URLConfig } from './URLConfig';
 import { ActorModel } from './Actor.model';
 import { OMDBResponse } from './models/OMDBResponse';
-import { Observable } from 'rxjs';
+import {Observable} from 'rxjs/Observable'
+import 'rxjs/add/observable/forkJoin';
 
 export interface Result {
     Items: ActorModel[];

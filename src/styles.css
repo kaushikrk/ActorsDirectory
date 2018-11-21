@@ -34,9 +34,3 @@ input[type="file"] {
     .verticalLine-right {
         border-right: thick solid black;
       }
-      .dropdown{
-        background-color: #333333;
-        border-color: none;
-        margin-left: 2%;
-        color: #ffc34d;
-      }
