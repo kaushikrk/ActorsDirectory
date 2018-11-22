@@ -11,7 +11,6 @@ import { ActorDetailsComponent } from './actor-details/actor-details.component';
 import { ActorService } from './actor.service';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
-import { InProgressComponent } from './in-progress/in-progress.component';
 import { AuditionpageComponent } from './Auditions/auditionpage/auditionpage.component';
 import { AuditionFormComponent } from './Auditions/audition-form/audition-form.component';
 import { AuditionService } from './audition.service';
@@ -20,6 +19,7 @@ import {RatingModule} from 'primeng/rating';
 import {InputTextareaModule} from 'primeng/inputtextarea';
 import { PhotographerComponent } from './photographer/photographer.component';
 import { HomeComponent } from './home/home.component';
+import { LatestComponent } from './latest/latest.component';
 const routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   {path: 'home', component: HomeComponent},
@@ -29,7 +29,7 @@ const routes = [
   {path: 'signup', component: RegisterPageComponent} ,
   {path: 'login', component: LoginComponentComponent},
   {path: 'photographers', component: PhotographerComponent},
-  {path: 'locations', component: InProgressComponent}
+  {path: 'latest', component: LatestComponent}
 ];
 @NgModule({
   declarations: [
@@ -40,11 +40,11 @@ const routes = [
     ActorDetailsComponent,
     RegisterPageComponent,
     LoginComponentComponent,
-    InProgressComponent,
     AuditionpageComponent,
     AuditionFormComponent,
     MessageScreenComponent,
-    HomeComponent
+    HomeComponent,
+    LatestComponent
   ],
   imports: [
     BrowserModule,

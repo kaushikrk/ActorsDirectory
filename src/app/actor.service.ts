@@ -29,7 +29,7 @@ export class ActorService {
         if (movies && movies.length > 0) {
             let movieRequests = [];
             movies.forEach(element => {
-                movieRequests.push(this.http.get<OMDBResponse>("http://www.omdbapi.com/?apikey=BanMePlz&t=" + element));
+                movieRequests.push(this.http.get<OMDBResponse>("http://www.omdbapi.com/?apikey=c01f9765&t=" + element));
             });
             return Observable.forkJoin(movieRequests);
         }
