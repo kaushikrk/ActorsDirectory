@@ -1,0 +1,24 @@
+<form [formGroup]="registerForm">
+    <strong class="text-success text-center strong" *ngIf="registrationSuccess">Successfully registered</strong>
+    <strong class="text-danger strong text-center" *ngIf="showRegistrationError()">{{errorMsg}}</strong>
+    <div class="offset-md-1">
+      <input formControlName="userName" type="text" style="margin-top: 5%;" class="form-control usercredentials" placeholder="Valid Email"
+        id="userName">
+    </div>
+    <div class="offset-md-1">
+      <input formControlName="contactNumber" type="text" style="margin-top: 5%;" class="form-control usercredentials" placeholder="Mobile"
+        id="mobileNo">
+    </div>
+    <div class="offset-md-1">
+      <input formControlName="password" type="password" class="form-control usercredentials" placeholder="Password" id="password">
+    </div>
+    <p class="text-center">By signing up you agree to Icchata's
+      <a routerLink="/terms-and-conditions" target="_blank">Terms of Service</a>
+    </p>
+    <!-- <button class="btn login-btn" (click)="register()">Signup</button> -->
+    <div class="col-md-4 col-xs-5 mx-auto">
+      <input type="button" value="Signup" class="form-control btn custom-primary-btn" (click)="register()">
+      <!-- <a class="row" style="padding-top:10px;">Have a account ?</a> -->
+    </div>
+    <hr>
+</form>

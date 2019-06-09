@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row" [formGroup]="securityForm">
+    <div class="form-group col-md-3 col-xs-10">
+      <strong class="text-success" *ngIf="passwordResetSuccess">{{userMsg}}</strong>
+      <strong class="text-danger" *ngIf="!passwordResetSuccess">{{userMsg}}</strong>
+      <div class="form-group" style="margin-top:30px;" [ngClass]="
+      {'has-error':securityForm.controls.newPassword.invalid,
+       'has-success':securityForm.controls.newPassword.valid
+      }
+      "><label for="name">New Password*:</label>
+        <input formControlName="newPassword" placeholder="Password must be 8-12 characters long and cannot contain special characters"
+          type="password" class="form-control dropdown" id="newPassword" name="password">
+      </div>
+       <div class="form-group" [ngClass]="
+       {'has-error':securityForm.controls.confirmPassword.invalid,
+        'has-success':securityForm.controls.confirmPassword.valid
+       }
+       ">
+          <label for="name">Confirm Password*:</label>
+          <input formControlName="confirmPassword" placeholder="Password must be 8-12 characters long and cannot contain special characters" type="password" class="form-control dropdown"
+            id="confirmPassword" name="password">
+       </div>
+    </div>
+  </div>
+  <button class="btn btn-primary offset-3" style="margin-top:16px;" (click)="changePassword()">Change password</button>
+</div>

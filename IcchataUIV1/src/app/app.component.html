@@ -1,0 +1,98 @@
+<app-message-screen *ngIf="showLoading" class="layer2">
+  <div></div>
+</app-message-screen>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">
+    <img src="../assets/logo2.jpg" style="height:70px;width:70px;border-radius:50%;margin-left: 10px;margin-top:-15px;" alt="">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link text-warning" routerLink="events">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-warning" routerLink="plays">Plays</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-warning" routerLink="actor">Actors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-warning" routerLink="photographer">Photographers</a>
+            </li>
+            <!-- <li class="dropdown nav-item" *ngIf="userLoggedIn">
+                <a class="dropdown-toggle text-warning " data-toggle="dropdown" href="#">{{userName}}
+                </a>
+                <ul class="dropdown-menu" style="background-color: inherit;">
+                  <li>
+                    <a style="background-color: inherit;" class="nav-link text-warning" routerLink="/profile">Profile</a>
+                  </li>
+                  <li>
+                    <a style="background-color: inherit;" class="nav-link text-warning" (click)="logout()">Logout</a>
+                  </li>
+                </ul>
+              </li> -->
+              <li class="nav-item dropdown" *ngIf="userLoggedIn">
+                  <a class="nav-link text-warning dropdown-toggle" id="navbardrop" data-toggle="dropdown">
+                    {{userName}}
+                  </a>
+                  <div class="dropdown-menu" style="background-color:#343a40;">
+                    <a style="background-color: #343a40;" class="dropdown-item text-warning" href="#">Profile</a>
+                    <a style="background-color: #343a40;" class="dropdown-item text-warning" href="#">Logout</a>
+                  </div>
+                </li>
+              <li class="nav-item" *ngIf="!userLoggedIn">
+                <a class="nav-link text-warning " href="/login">
+                  <span class="glyphicon glyphicon-log-in"></span> Login/Signup</a>
+              </li>        
+        </ul> 
+  </div>  
+</nav>
+<router-outlet></router-outlet>
+<footer class="footer bg-light mt-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item">
+              <a routerLink="/about">About</a>
+            </li>
+            <li class="list-inline-item">⋅</li>
+            <li class="list-inline-item">
+              <a routerLink="/disclaimer">discalimer</a>
+            </li>
+            <li class="list-inline-item">⋅</li>
+            <li class="list-inline-item">
+              <a routerLink="/terms-and-conditions">Terms of Use</a>
+            </li>
+            <li class="list-inline-item">⋅</li>
+            <li class="list-inline-item">
+              <a routerLink="/privacy-policy">Privacy Policy</a>
+            </li>
+          </ul>
+          <p class="text-muted small mb-4 mb-lg-0">©Icchata 2019. All Rights Reserved.</p>
+        </div>
+        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fa fa-facebook fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fa fa-twitter-square fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fa fa-instagram fa-2x fa-fw"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</footer>

@@ -1,0 +1,173 @@
+<ul class="nav nav-pills nav-justified">
+  <li class=" nav-item">
+    <a class="nav-link active" (click)="tab='profile'" data-toggle="tab" >Profile</a>
+  </li>
+  <li class=" nav-item">
+    <a class="nav-link" data-toggle="tab" (click)="tab='security'">Security</a>
+  </li>
+  <li class=" nav-item">
+    <a class="nav-link" data-toggle="tab" (click)="tab='contact'">Contact</a>
+  </li>
+</ul>
+<div class="row" style="margin:1%;">
+  <div *ngIf="successMessage" class="alert alert-success alert-dismissible">
+    <strong>Success!</strong> Profile updated successfully.
+  </div>
+  <div *ngIf="failureMessage" class="alert alert-danger alert-dismissible">
+    <strong>Oops!</strong> {{failureMessage}}.
+  </div>
+  <div *ngIf="tab=='profile'" class="col-md-offset-1" name="profile">
+    <div class="row" name="profile-image" style="margin-bottom: 20px;">
+      <img (click)="showUploadWindow(fileUpload)" class="col-xs-12 col-md-2 col-md-offset-1" src="{{profilePhotos}}" alt="Profile Image"
+        title="Click to change Profile image">
+      <p-fileUpload hidden=true mode="basic" name="photos" url="" accept="image/*" multiple='false' maxFileSize="1000000" (onSelect)="uploadFiles($event)"
+        chooseLabel="Upload your photos" #fileUpload>
+      </p-fileUpload>
+    </div>
+    <div class="col-md-5" name="profile-details">
+      <fieldset>
+        <form [formGroup]="userForm" class="custom-form-sheets">
+          <Legend class="dropdown">Profile</Legend>
+          <div>
+            <input type="hidden" formControlName="actorId">
+          </div>
+          <div class="form-group" [ngClass]="
+          {'has-error':userForm.controls.actorName.invalid,
+           'has-success':userForm.controls.actorName.valid
+          }
+          ">
+            <label for="name">User Name*:</label>
+            <input formControlName="actorName" placeholder="Profile name/Headline" type="text" class="form-control dropdown" id="name"
+              name="name">
+          </div>
+          <div class="form-group">
+            <label for="profileType">Select your profile type</label>
+            <!-- <input formControlName="profileType" type="text" class="form-control dropdown"> -->
+            <select formControlName="profileType" class="form-control dropdown" (change)="onProfileSelect($event)">
+              <option value="actor">Actor</option>
+              <option value="photographer">Photographer</option>
+              <!-- <option value="model">Model</option>
+              <option value="mc">MC</option>
+              <option value="speaker">Public Speaker</option>
+              <option value="asstDirector">Casting Director/Assistant Director</option>
+              <option value="cinematographer">Cinematographer</option>
+              <option value="prodExe">Production Executive</option>
+              <option value="musician">Composer/Musical Artiste</option>
+              <option value="others">Others</option> -->
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="otherProfile">How much you charge?</label>
+            <input formControlName="serviceCost" type="numbers" class="form-control dropdown" placeholder="Enter value ranges in INR"
+              title="Value can be approx">
+          </div>
+          <div class="form-group" *ngIf="showMovies">
+            <label for="movies">Movies</label>
+            <input formControlName="actorMovies" type="text" class="form-control dropdown">
+          </div>
+          <div class="form-group" *ngIf="showMovies">
+            <label for="roles">Roles Preffered</label>
+            <select formControlName="rolesPreffered" class="form-control dropdown">
+              <option value="Bangalore">Bangalore</option>
+              <option value="Chennai">Chennai</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Kochi">Kochi</option>
+              <option value="Mysore">Mysore</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="New Delhi">New Delhi</option>
+              <option value="Trivandrum">Trivandrum</option>
+            </select>
+          </div>
+          <div class="form-group" [ngClass]="
+          {'has-error':userForm.controls.actorLocation.invalid,
+           'has-success':userForm.controls.actorLocation.valid
+          }
+          ">
+            <label for="Location">City/Town:</label>
+            <input formControlName="actorLocation" type="text" title="City/Area name" class="form-control dropdown" id="Location" name="Location">
+          </div>
+          <div class="form-group">
+            <label for="about">Tell us something more about yourself :</label>
+            <textarea formControlName="aboutActor" class="form-control" name="about" id="about" cols="30" rows="10"></textarea>
+          </div>
+          <!-- <div class="form-group">
+            <label for="organizationType">I am a/ We are a :</label>
+            <select formControlName="organizationType" class="form-control dropdown" id="organizationType">
+              <option class="dropdown" *ngFor="let profile of orgType" value="{{profile.toLowerCase()}}">{{profile}}</option>
+            </select>
+          </div> -->
+        </form>
+      </fieldset>
+    </div>
+    <div class="col-md-offset-1 col-md-4" name="physical-details" *ngIf="showMovies">
+      <form [formGroup]="bioDetails" action="" class="custom-form-sheets">
+        <legend>Bio</legend>
+        <label for="height">Height</label>
+        <input formControlName="height" class="form-control" type="number" name="height" id="" placeholder="Height in cm" max=210>
+        <label for="Weight">Weight</label>
+        <input formControlName="weight" class="form-control" type="number" name="weight" id="" placeholder="Weight in Kg" max=150>
+        <label for="skintone">Skin Tone</label>
+        <select formControlName="skinTone" class="form-control">
+          <option>Albino</option>
+          <option>Black</option>
+          <option>Dark</option>
+          <option>Yellow</option>
+          <option>Dark Brown</option>
+          <option>Fair</option>
+          <option>Light</option>
+          <option>Light Brown</option>
+          <option>Medium</option>
+          <option>Medium Brown</option>
+          <option>Olive</option>
+          <option>Ruddy</option>
+          <option>Sallow</option>
+          <option>Other</option>
+        </select>
+        <label for="eyeColor">Eye Color</label>
+        <select formControlName="eyeColor" class="form-control">
+          <option>Black</option>
+          <option>Blue</option>
+          <option>Brown</option>
+          <option>Gray</option>
+          <option>Green</option>
+          <option>Hazel</option>
+          <option>Maroon</option>
+          <option>Pink</option>
+          <option>Multicolored</option>
+          <option>Other</option>
+        </select>
+      </form>
+      <!-- <form [formGroup]="productionForm" action="" class="custom-form-sheets" style="margin-top:20px;">
+        <div *ngIf="listProductions">
+            <legend>Productions</legend>
+            <table class="table table-bordered">
+              <tr>
+                <th>Production Name</th>
+                <th>Release Year</th>
+              </tr>
+              <tr *ngFor="let production of actor.productions">
+                <td>{{production.productionName}}</td>
+                <td>{{production.productionYear}}</td>
+                <td>{{production.rolePlayed}}</td>
+              </tr>
+            </table>
+            <input (click) ="listProductions=!listProductions" class="form-control btn btn-primary" type="button" value="Add a production to my portfolio">
+        </div>
+        <div *ngIf="!listProductions">
+          <label for="productionName">Production Name</label>
+          <input formControlName="productionName" class="form-control" type="text">
+          <label for="">Production Release Year</label>
+          <input formControlName="productionYear" class="form-control" type="text">
+          <label for="">Role Played</label>
+          <input formControlName="rolePlayed" class="form-control" type="text">
+          <input (click) ="addProductions()" type="button" class="form-control btn btn-primary" value="Save" style="margin-top:10px;">
+        </div>
+      </form> -->
+    </div>
+  </div>
+</div>
+<div class="row col-xs-push-3 col-xs-7 col-md-push-4 col-md-3" *ngIf="tab=='profile'" style="margin-top:55px;">
+  <button type="button" class="offset-4 col-5 btn btn-primary" (click)="submit()" [disabled]="userForm.invalid">Save</button>
+</div>
+<app-security-form *ngIf="tab=='security'"></app-security-form>
+<app-contact-form (saveEvent)="submit($event)" actor="{{actor|json}}" *ngIf="tab=='contact'"></app-contact-form>

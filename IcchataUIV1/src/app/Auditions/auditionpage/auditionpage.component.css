@@ -1,0 +1,21 @@
+@media only screen and (min-width:600px) {
+    .float-button{
+        float:right;
+    }
+}
+.audition-summary {
+    background-color:gold;
+    color: black;
+    height:10%;
+    font-size:20px;
+    border: none;
+}
+.audition-details{
+    color:black;
+    background-color: ghostwhite;
+    font-size: 16px;
+}
+p{
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

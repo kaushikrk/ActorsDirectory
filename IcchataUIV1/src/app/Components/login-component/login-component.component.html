@@ -1,0 +1,32 @@
+<div style="margin:10px;">
+  <div class="col-md-4">
+    <ul class="nav nav-pills nav-justified">
+      <li class="nav-item">
+          <a class=" active tab-active nav-link text-dark col-xs-6 col-md-12" [ngClass]="{'active':tab=='login'}" (click)="tab='login'" data-toggle="tab"  href="#menu1">Login</a>
+      </li>
+      <li class="nav-item">
+          <a class=" nav-link tab-active text-dark col-xs-6 col-md-12" [ngClass]="{'active':tab=='signup'}" data-toggle="tab" (click)="tab='signup'" href="#menu2">Signup</a>
+      </li>
+    </ul>
+    <app-login-form *ngIf="tab=='login'"></app-login-form>
+    <app-signup-form *ngIf="tab=='signup'"></app-signup-form>
+    <div class="row">
+        <div class="mx-auto">
+            <google-signin></google-signin>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="layer2" *ngIf="showForgotPassword">
+  <div class="col-md-4 forgot-password">
+    <strong class="col-md-push-4 col-md-5" style="font-family: Roboto; margin:5px;">
+      Forgot Password
+    </strong>
+    <i class="fa fa-close fa-2x pull-right" style="margin-bottom: 10px;" (click)="showForgotPassword=false"></i>
+    <input #mobileNumber class="form-control" style="margin: 20px 0 0 0;" type="text" placeholder="Enter your Mobile number"
+      name="" id="mobileNumber">
+    <input #emailAddress class="form-control" style="margin: 20px 0 0 0;" type="text" placeholder="Enter your Email address"
+      name="" id="emailAddress">
+    <button class="btn common-btn col-md-push-4 col-md-4" style="margin-top: 10px;" (click)="getPassword($event,mobileNumber,emailAddress)">Get New Password</button>
+  </div>
+</div>

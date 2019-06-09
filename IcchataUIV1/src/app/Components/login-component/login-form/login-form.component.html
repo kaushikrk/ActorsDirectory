@@ -1,0 +1,29 @@
+<form [formGroup]="loginForm">
+  <div class="row">
+    <div class="offset-md-1" *ngIf="invalidCredentials">
+      <strong class="text-danger text-center strong">Invalid Username/Password</strong>
+    </div>
+    <div class="offset-md-1" *ngIf="passwordSent">
+      <strong class="text-success text-center strong">{{errorMsg}}</strong>
+    </div>
+    <div class="offset-md-1 col-md-10">
+      <input formControlName="userId" type="text" style="margin-top: 5%;" class="form-control usercredentials" placeholder="Mobile">
+    </div>
+    <div class="offset-md-1 col-md-10">
+      <input formControlName="password" type="password" class="form-control usercredentials" placeholder="Password">
+    </div>
+    <div class="offset-md-3 col-md-4 col-xs-5 col-xs-push-3">
+      <input type="button" data-dismiss="modal" value="Login" class="form-control btn custom-primary-btn" (click)="login()">
+    </div>
+  </div>
+  <div class="row">
+    <div class="w-25"></div>
+    <div (click)="showForgotPassword=true" class="col mt-2">
+      <a>Forgot Password ?</a>
+    </div>
+  </div>
+  <hr>
+  <!-- <div class="offset-md-1 col-md-8">
+      <input type="button" class="form-control custom-primary-btn" (click)="tab='signup'" value="Don't have a account? Create New">
+    </div> -->
+</form>

@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="row">
+        <div *ngFor="let movie of movieList" class="col-md-3 col-sm-3 col-xs-12">
+            <div class="single-team-member">
+              <div class="team-img">
+                <a routerLink="{{redirectURLPattern}}/{{movie.movieId}}" *ngIf="movie.poster">
+                  <img class="grid-view" src="../../../../assets/movies/{{movie.poster}}" alt="">
+                </a>
+                <a routerLink="/movie/details/{{movie.movieId}}" *ngIf="!movie.poster">
+                  <img class="grid-view" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png" alt="">
+                </a>
+              </div>
+              <div class="team-content text-center profile-name">
+                <h4>
+                  <a class="nav-item profile-link" routerLink="{{redirectURLPattern}}/{{movie.movieId}}">
+                    {{movie.title}}
+                  </a>
+                </h4>
+                <p>{{movie.language}}</p>
+              </div>
+            </div>
+    </div>
+  </div>
+</div>

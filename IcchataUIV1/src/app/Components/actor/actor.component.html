@@ -1,0 +1,53 @@
+<div class="container-fluid">
+  <div class="row" style="margin:1%;">
+    <!-- <span class="fa fa-search pull-right" title="Click to search" (click)="searchActorList(searchBoxElement)"></span>
+      <input type="text" class="pull-right" #searchBoxElement> -->
+    <p class="alert alert-danger" *ngIf="noResultsFound">
+      <b>
+        No results found
+      </b>
+    </p>
+  </div>
+  <div class="row mb-4">
+    <div class="col-md-4 col-xs-6 offset-md-4 offset-xs-2">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search by Location or name">
+        <div class="input-group-append">
+          <button class="btn btn-warning fa fa-search" type="submit"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div *ngFor="let actor of currentList" class="single-team-member col-md-3">
+      <div class="team-img">
+        <a routerLink="/details/{{actor.actorId}}" *ngIf="actor.actorPhoto">
+          <img class="grid-view" src="{{actor.actorPhoto}}" alt="">
+        </a>
+        <a routerLink="/details/{{actor.actorId}}" *ngIf="!actor.actorPhoto">
+          <img class="grid-view" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png" alt="">
+        </a>
+      </div>
+      <div class="team-content text-center profile-name">
+        <h4>
+          <a class="profile-link text-uppercase" routerLink="/details/{{actor.actorId}}">
+            {{actor.actorName}}
+          </a>
+        </h4>
+        <p>{{actor.actorLocation}}</p>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!noResultsFound" class="row justify-content-center" name="page-numbers">
+      <div class="">
+        <ul class="pagination">
+          <li class="page-item" (click)="onPrevPageClick($event)">
+            <a class="page-link">Prev</a>
+          </li>
+          <li class="page-item" (click)="onNextPageClick($event)">
+              <a class="page-link">Next</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+</div>

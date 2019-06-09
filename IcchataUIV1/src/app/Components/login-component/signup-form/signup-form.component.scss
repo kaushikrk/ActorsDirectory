@@ -1,0 +1,60 @@
+.login-btn{
+    position: relative;
+    left:35%;
+    margin: 10px -20px 0 -40px;
+    height:40px;
+    width: 150px;
+    background-color: #333333;
+    border-color: #333333;
+    color: white;
+}
+.custom-primary-btn{
+    background-color:#ffc34d;
+    color:#444;
+}
+.federation-btn {
+    position: relative;
+    left:20%;
+    top:20%;
+    margin: 20px 10px 0 10px;
+}
+
+.vertical-line {
+    border: 2px  #686666cc;
+    border-style: none solid none  none;
+}
+.usercredentials{
+    border-radius: 0%;
+    margin:2% 0 5% 0;
+    height:30px;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+}
+@media screen and (max-width:360px){
+    .google-signin {
+        position:relative;left:110px;
+    }
+    .forgot-password{
+        position:relative;
+        top: 50% !important;
+        height: 200px !important;
+        background-color: white !important;
+    }
+}
+@media screen and (min-width:900px){
+    .google-signin {
+        position:relative;
+        left:210px;
+        top:100px;
+    }
+    .forgot-password{
+        position:relative;
+        top: 30%;
+        left:35%;
+        height: 200px;
+        background-color: white !important;
+    }
+}
+
+

@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <legend>Personal contact</legend>
+  <section class="row" [formGroup]="contactForm">
+    <div class="form-group col-md-3">
+      <label for="profileType">Contact Number</label>
+      <input formControlName="actorContactNumber" type="text" class="form-control dropdown">
+      <i>Display contact info on profile :</i>
+      <input formControlName="actorContactConsent" type="checkbox" class="" id="contactConsent">
+    </div>
+    <div class="form-group col-md-3">
+      <label for="profileType">Email</label>
+      <input formControlName="userEmail" type="text" class="form-control dropdown">
+    </div>
+  </section>
+  <legend style="margin-top:3%;font-family: Roboto;">Social Links</legend>
+  <section class="row" [formGroup]="contactForm">
+    <div class="form-group col-md-3">
+      <label for="instaLink">Instagram Link</label>
+      <input formControlName="instaLink" type="text" class="form-control dropdown">
+    </div>
+    <div class="form-group col-md-3">
+      <label for="instaLink">Facebook Page</label>
+      <input formControlName="fbLink" type="text" class="form-control dropdown">
+    </div>
+    <div class="form-group col-md-3">
+      <label for="instaLink">Website</label>
+      <input formControlName="website" type="text" class="form-control dropdown">
+    </div>
+  </section>
+  <button (click)="SaveContactForm()" style="margin-top:1%;" class=" 
+  offset-3 col-5 btn btn-primary"> Save</button>
+</div>

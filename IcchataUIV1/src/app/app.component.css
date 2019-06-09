@@ -1,0 +1,38 @@
+.brand-name-size{
+    font-size:32px;
+    font-family:Acme, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: #333333;
+    color:#ffc34d;
+    border-color:#333333;
+}
+.no-border{
+    border: none;
+}
+    
+.register{
+    color:#ffc34d!important;
+    font-family:Roboto !important;
+    margin:1%;
+    text-decoration: underline;
+}
+.profile{
+    background-color:#333333 !important;
+    color:white !important;
+}    
+footer>span{
+margin:10px;
+color:#ffc34d;
+}
+footer>span:hover{
+    text-decoration: underline;
+}
+.navbar-inverse .navbar-toggle .icon-bar{
+    background-color:#ffc34d;
+}
+.main-menu{
+    font-size:120% !important;
+    font-weight: 700 !important;
+}
+a{
+    color:#ba8b00!important;
+}

@@ -1,0 +1,90 @@
+ @media only screen and (min-width: 900px){
+    .actor-profiles  {
+        position:relative;
+        margin-top: 5%;
+        left:10%;
+        max-height: 450px;
+    }
+}
+.img-scaling{
+    height:300px;
+    width: 300px;
+}
+.actor-details {
+    
+    font-size: 20px;
+    font-family: Roboto, Helvetica, sans-serif;
+    position:relative;
+    left:10px;
+    top: 20px;
+}
+.specifications {
+    font-size: 120%; 
+    font-family: Roboto,Helvetica, sans-serif;
+    font-weight: 300;
+}
+.details {
+    padding:15px; 
+    font-family: Helvetica, sans-serif;
+    font-weight: 300;
+    font-style: italic; 
+}
+.pointer {cursor: pointer;}
+.movies{
+    background-color: #ff0000;
+    border-radius:10%;
+    color: antiquewhite;
+    padding: 3%;
+    margin: 3%;
+}
+
+:host ::ng-deep .login-margin{
+    margin: 5%;
+}
+.insta{
+    height:80px;
+    width:100px;
+}
+.checked{
+    color:#ffc34d;
+}
+.previous, .next {
+    background-color: #ffc34d;
+    color: white;
+  }
+  
+  .round {
+    border-radius: 50%;
+  }
+  a {
+    margin:15px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+  }
+  .table-bordered.bio-details{
+      border-top:none;
+      border-left:none;
+      border-right:none;
+  }
+  
+  .star {
+    font-size: 1.5rem;
+    color: #b0c4de;
+  }
+  .filled {
+    color: #ffc34d;
+  }
+  .bad {
+    color: #deb0b0;
+  }
+  .filled.bad {
+    color: #ff1e1e;
+  }
+  .nav-pills .nav-link.active.tab-active{
+      background-color: #ffc34d;
+  }
+  .btn-primary{
+      color:#444;
+      background-color:#ffc107!important;
+  }

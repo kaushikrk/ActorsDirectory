@@ -1,0 +1,34 @@
+.preview{
+    padding:3%;
+}
+.submit-btn{
+    width:150px;
+    height:30px;
+    border:none;
+}
+.submit-btn:hover {
+    border:none;
+}
+.invalid{
+    border:2px solid rgb(175, 86, 86);
+}
+div {
+    
+}
+.register-title{
+    font-size: 130%;font-family:Roboto;
+}
+.reset-files{   
+}
+.custom-form-sheets{
+    border:1px solid #ccc;padding:15px;box-shadow:8px 8px #ccc;
+}
+.btn-primary {
+    color: #444!important;
+    background-color: #ffc107!important;
+    border-color:#ffc107!important;
+}
+.nav-pills .nav-link.active{
+    color: #444!important;
+    background-color: #ffc107!important;
+}

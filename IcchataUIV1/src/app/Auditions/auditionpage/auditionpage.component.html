@@ -1,0 +1,38 @@
+<div class="container">
+  <p class="text-danger" *ngIf="noResults">No Results found</p>
+  <!-- <div class="row" style="margin: 40px;">
+    <div class="col-md-offset-2 col-md-3 col-xs-12">
+      <input type="search" class="form-control" id="sus_email" placeholder="Male/Female">
+    </div>
+    <div class="col-md-3 col-xs-12">
+      <input type="search" class="form-control" id="sus_email" placeholder="Location">
+    </div>
+    <div class="col-md-3 col-xs-12">
+      <input type="search" class="form-control" id="sus_email" placeholder="Age">
+    </div>
+    <div class="col-md-3">
+      <input type="button" routerLink="/search" class="form-control btn-primary custom-primary-btn" style="" value="Find Jobs">
+    </div>
+    <!-- <button class="btn btn-primary" style="border-radius: 0%;">Find Jobs</button> -->
+    <!-- <button class="btn btn-primary" style="margin-left:10px;">Post Jobs</button>
+  </div> -->
+  <div class="row">
+      <div *ngFor="let audition of auditions"class="col-md-offset-2 container col-md-5">
+          <h2></h2>
+          <div class="panel panel-default">
+            <div class="panel-heading" style="background-color: #444;color:#ffb21a;font-size: 120%;">{{audition.roleName}}, {{audition.productionName}}</div>
+            <div class="panel-body">
+                <p class="text-uppercase">{{audition.productionType}} | {{audition.auditionFor}}</p>
+              <p>{{audition.auditionDescription}}</p>
+              <p>Audition on : {{audition.auditionDate.day}}/{{audition.auditionDate.month}}/{{audition.auditionDate.year}}</p>
+              <p>
+                Audition at: {{audition.auditionLocation}}</p>
+                <p>Contact : {{audition.contactDetails}}</p>
+            </div>
+          </div>
+        </div>
+  </div>
+  <div class="row">
+      <input type="button" routerLink="/auditions/create" class=" col-md-offset-3 btn btn-primary custom-primary-btn" value="Post an Audition">
+  </div>  
+</div>

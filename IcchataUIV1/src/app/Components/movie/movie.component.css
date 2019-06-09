@@ -1,0 +1,32 @@
+.custom-primary-btn{
+    background-color:#ffc34d;
+    color:#444;
+}
+tr > * {
+    padding:5px;
+}
+@media screen and (width:760){
+    .trailer{
+        width : 560px;
+        height: 315px;
+    }
+}
+@media screen and (width:360){
+    .trailer{
+        width : 360px;
+        height: 315px;
+    }
+}
+.star {
+    font-size: 1.5rem;
+    color: #b0c4de;
+  }
+  .filled {
+    color: #ffc34d;
+  }
+  .bad {
+    color: #deb0b0;
+  }
+  .filled.bad {
+    color: #ff1e1e;
+  }

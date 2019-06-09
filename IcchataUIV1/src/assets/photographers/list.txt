@@ -1,0 +1,19 @@
+ Volume in drive D has no label.
+ Volume Serial Number is 2ABF-E664
+
+ Directory of D:\Kaushik\Workspace\Angular\ActorsDirectoryUI\src\assets\photographers
+
+13/05/2019  12:16 AM    <DIR>          .
+13/05/2019  12:16 AM    <DIR>          ..
+13/05/2019  12:15 AM            36,733 1544349932236_0.jpg
+13/05/2019  12:15 AM            33,786 1544351831554_0.jpg
+13/05/2019  12:15 AM            47,772 1544710409094_0.jpg
+13/05/2019  12:15 AM            31,313 1544723888405_0.jpg
+13/05/2019  12:15 AM            46,234 1544759577063_0.jpg
+13/05/2019  12:15 AM            51,359 1544807890973_0.jpg
+13/05/2019  12:15 AM            49,576 1544808434179_0.jpg
+13/05/2019  12:15 AM            83,461 1546402448669_0.jpg
+13/05/2019  12:15 AM    <DIR>          JPEG
+13/05/2019  12:16 AM                 0 list.txt
+               9 File(s)        380,234 bytes
+               3 Dir(s)  14,307,475,456 bytes free

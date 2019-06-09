@@ -1,0 +1,122 @@
+<div class="container">
+  <div class="row" name="movie-poster">
+    <div class="col-md-push-1 col-md-5 col-xs-12">
+      <a href="">
+          <img src="../../../assets/movies/{{movie.poster}}" alt="">
+      </a>
+    </div>
+    <div class="col-md-push-1 col-md-5 col-xs-12" style="margin-top: -10px;">
+      <h3 class="text-center" style="background-color:#ffb21a;color:#444; padding-bottom: 5px;padding-top: 5px;">{{movie.title}}</h3>
+      <p style="white-space: pre-line">{{movie.shortDescription}}
+      </p>
+        <table>
+          <tr *ngIf="movie.eventLocation"><td>
+            <b>Venue</b>
+          </td>
+          <td>
+            {{movie.eventLocation}}
+          </td>
+        </tr>
+        <tr *ngIf="movie.eventDate"><td>
+          <b>Date</b>
+        </td>
+        <td>
+          {{movie.eventDate}}
+        </td>
+      </tr>
+      <tr *ngIf="movie.eventTime"><td>
+        <b>Time</b>
+      </td>
+      <td>
+        {{movie.eventTime}}
+      </td>
+    </tr>
+        </table>
+      <legend *ngIf="detailType!='event'" class="text-uppercase" style="margin-top: 15px;">Info Icch</legend>
+      <table *ngIf="detailType!='event'" class="">
+        <tr>
+          <td ><Strong>
+            Director
+          </Strong></td>
+          <td>{{movie.directorName}}</td>
+        </tr>
+        <tr>
+          <td><Strong>
+            Music
+          </Strong></td>
+          <td>{{movie.musicDirector}}</td>
+        </tr>
+        <tr>
+          <td>
+          <Strong>
+            Editing
+          </Strong>  
+          </td>
+          <td>{{movie.editor}}</td>
+        </tr>
+        <tr>
+          <td><Strong>Cinematography</Strong></td>
+          <td>{{movie.cinematographer}}</td>
+        </tr>
+      </table>
+      <legend class="text-uppercase" style="margin-top:20px;">Wordcloud</legend>
+      <img src="../../../assets/movies/{{movie.wordCloud}}" alt="">
+      <legend class="text-uppercase" style="margin-top:20px;">User rating</legend>
+      <p class="text-success" *ngIf="onRatingSuccess">Thanks for your rating !!</p>
+      <p class="text-danger" *ngIf="alreadyRated">You have already rated this movie !!</p>
+      <!-- <ng-template #t let-fill="fill">
+        <span class="star" [class.full]="fill === 100">
+          <span class="half" [style.width.%]="fill">&hearts;</span>&hearts;
+        </span>
+      </ng-template>
+      <ngb-rating [(rate)]="currentRate" [starTemplate]="t" [readonly]="false" max="5"></ngb-rating> -->
+      <ngb-rating [(rate)]="currentRate">
+          <ng-template let-fill="fill" let-index="index">
+            <span (click)="postRating($event)" class="star" [class.filled]="fill === 100" [class.bad]="index < 3">&#9733;</span>
+          </ng-template>
+        </ngb-rating>
+      <!-- <input *ngIf="!onRatingSuccess" type="button" (click)="postRating($event)" class="btn primary-btn custom-primary-btn" style="margin-left:10px;margin-top:-15px;" value="Rate"> -->
+      <div>
+          <p>{{totalRatings}} ratings</p>
+      </div>
+      <hr>
+    </div>
+  </div>
+  <div class=" row " style="margin-top:10px;" *ngIf="movie.trailer">
+    <div class="col-md-push-1 col-md-6 col-xs-12 ">
+      <legend class="text-uppercase">TRAILER icch</legend>
+      <iframe class ="trailer" [src]="movie.trailer" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;fullscreen;"></iframe>
+    </div>
+  </div>
+  <div class=" row " style="margin-top:10px; ">
+    <div class="col-md-push-1 col-md-6 col-xs-12 ">
+      <legend class="text-uppercase">Review icch</legend>
+      <p class="text-danger" *ngIf="reviewed">Oops!You have already Reviewed this movie !!</p>
+      <p class="text-danger" *ngIf="required">Please write more than 30 characters before posting !!</p>
+      <textarea class="form-control" placeholder="Write your reviews here...Minimum 150 characters" name=" " id=" " rows="5 " #review></textarea>
+      <input (click)="postReviews(review)"style="margin-top:10px; " class="text-center form-control btn custom-primary-btn" type="button " value="Post Review ">
+    </div>
+  </div>
+  <div class=" row " style="margin-top:10px; ">
+    <div class="col-md-push-1 col-md-6 col-xs-12 ">
+      <legend class="text-uppercase">Recent Reviews</legend>
+      <table class="table table-default">
+        <tr *ngFor="let review of reviews">
+          <td class="col-md-2"><strong>
+              {{review.userName}}
+          </strong></td>
+          <td>{{review.reviewComment}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- <div id="myModal" *ngIf="!userLoggedIn" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content
+        <div style="background-color: white;padding:20px;">
+            <app-login-component (loggedIn)="checkStatus($event)"></app-login-component>
+        </div>
+    </div>
+</div> -->

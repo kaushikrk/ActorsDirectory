@@ -1,0 +1,187 @@
+   <div class="container-fluid">
+        <div *ngIf="successMessage" class="alert alert-success alert-dismissible">
+                <strong>Success!</strong> Contact sent successfully.
+            </div>
+            <div *ngIf="error" class="alert alert-danger alert-dismissible">
+                <strong>Failed!</strong> {{errorMsg}}.
+            </div>
+            <div class="row">
+                <div class="col-md-5" name="profile-image">
+                    <img class="actor-profiles img-responsive" src="{{profilePhoto}}">
+                </div>
+                <fieldset class="offset-md-1 col-md-5" name="headline">
+                    <div class="col-md-8">
+                        <h2 class="text-center text-uppercase" style="font-family: Roboto;">{{actor.actorName}}</h2>
+                        <h6 class="text-center text-uppercase">
+                            <span style="font-family:Roboto;margin: 2px;">{{actor.profileType}}</span>
+                            <span style="font-family:Roboto;margin: 2px;">{{actor.actorLocation}}</span>
+                        </h6>
+                        <section>
+                            <div class="row offset-md-3 offset-2" style="margin-left:70px;">
+                                <p class=" text-success" *ngIf="onRatingSuccess">Thanks for your rating !!</p>
+                                <p class="text-danger" *ngIf="alreadyRated">You have already rated this !!</p>
+                                <ngb-rating class="text-center" [(rate)]="currentRate">
+                                    <ng-template let-fill="fill" let-index="index">
+                                        <span (click)="postRating($event)" class="star" [class.filled]="fill === 100" [class.bad]="index < 3">&#9733;</span>
+                                    </ng-template>
+                                </ngb-rating>
+                                <!-- <input *ngIf="!onRatingSuccess" type="button" (click)="postRating($event)" class="btn primary-btn custom-primary-btn" style="margin-left:10px;margin-top:-15px;"
+                                    value="Rate"> -->
+                            </div>
+                            <div class="row offset-md-4 offset-4" style="margin-left:120px;">
+                                    <p>{{totalRatings}} ratings</p>
+                            </div>
+                        </section>
+                        <section *ngIf="actor.aboutActor">
+                            <p style="white-space: pre-line;"class="specifications text-left">{{actor.aboutActor}}</p>
+                            <dl>
+                                <dt>Cost:</dt>
+                                <dd>INR {{actor.serviceCost}}</dd>
+                            </dl>
+                        </section>
+                        <!-- <section class="text-center">
+                            <input type="button" value="Connect" class="btn primary-btn custom-primary-btn">
+                        </section> -->
+                    </div>
+                </fieldset>
+            </div>
+            <ul class="nav nav-pills">
+                <li class="nav-item col" *ngIf="actor.bioDetails" >
+                    <a class="nav-link tab-active" (click)="details='bio'" [ngClass]="{active:details=='bio'}">Bio</a>
+                </li>
+                <li class="nav-item col">
+                    <a class="nav-link tab-active" (click)="details='movies'" [ngClass]="{active:details=='movies'}">Movies</a>
+                </li>
+                <li class="nav-item col">
+                    <a class="nav-link tab-active" (click)="details='contact'" [ngClass]="{active:details=='contact'}">Contact</a>
+                </li>
+                <li  class="nav-item col">
+                    <a class="nav-link tab-active" (click)="details='photos'" [ngClass]="{active:details=='photos'}">Photos</a>
+                </li>
+                <li class="nav-item col">
+                    <a class="nav-link tab-active" (click)="details='videos'" [ngClass]="{active:details=='videos'}" >Videos</a>
+                </li>
+            </ul>
+            <div *ngIf="details=='movies'">
+                <div class="container" *ngIf="OMDBResponses">
+                    <div class="col-md-2 col-sm-3" style="margin: 2%" *ngFor="let movie of OMDBResponses">
+                        <img style="width:200px;height: 300px;" src="{{movie.Poster}}" alt="{{movie.Title}}">
+                        <p>
+                            <a href="https://www.imdb.com/title/{{movie.imdbID}}">{{movie.Title}}</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="details=='contact'" class="col-md-5 col-xs-12">
+                <table *ngIf="userLoggedIn" class="table table-default" style="">
+                    <tr>
+                        <td class="details">
+                            <a *ngIf="actor.actorContactConsent"class="col-xs-4 col-md-2" data-toggle="modal" data-target="#myModal" style="margin-left:8px;">
+                                <!-- <img class="insta fa fa-facebook-officila fa-3x" src="../../../assets/fb.jpeg" alt=""> -->
+                                <i class="fa fa-phone fa-3x" aria-hidden="true">
+                                    <p style="font-family:'Roboto';font-size:12px;">
+                                        <!-- {{actor.actorContactNumber}} -->SMS
+                                    </p>
+                                </i>
+                            </a>
+                            <a class="col-xs-4 col-md-2 text-dark" [href]="emailTo" target="_blank" style="margin-left:8px;" *ngIf="actor.userEmail">
+                                <!-- <img class="insta fa fa-facebook-officila fa-3x" src="../../../assets/fb.jpeg" alt=""> -->
+                                <i (click)="getQuotation()" class="fa fa-envelope fa-3x" aria-hidden="true">
+                                    <p style="font-family:'Roboto';font-size:12px; padding:5px;">
+                                        Mail
+                                    </p>
+                                </i>
+                            </a>
+                            <a class="col-xs-4 col-md-2 text-dark" style="margin-left:8px;" *ngIf="actor.website" href="{{actor.website}}" target="_blank">
+                                <!-- <img class="insta fa fa-facebook-officila fa-3x" src="../../../assets/fb.jpeg" alt=""> -->
+                                <i class="fa fa-briefcase fa-3x" title="{{actor.website}}"></i>Website
+                            </a>
+                            <a class="col-xs-4 col-md-2 text-dark" style="margin-left:8px;" *ngIf="actor.fbLink" href="{{actor.fbLink}}" target="_blank">
+                                <!-- <img class="insta fa fa-facebook-officila fa-3x" src="../../../assets/fb.jpeg" alt=""> -->
+                                <i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i>Facebook
+                            </a>
+                            <a class="col-xs-4 col-md-2 text-dark" style="margin-left:8px;" *ngIf="actor.instaLink" href="{{actor.instaLink}}" target="_blank">
+                                <!-- <img class="insta" src="../../../assets/download.jpg" alt=""> -->
+                                <i class="fa fa-instagram fa-3x" aria-hidden="true"></i> Insta
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- <div class="row">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                </div> -->
+                    </tr>
+                </table>
+                <p style="font-size: 120%;" *ngIf="!userLoggedIn">Login to see contact details</p>
+            </div>
+            <div *ngIf="details=='videos'">
+            
+            </div>
+            <div *ngIf="details=='photos'">
+            
+            </div>
+            <div *ngIf="details=='bio'" class="col-md-5">
+                <table class="table table-default bio-details">
+                    <tr>
+                        <td>
+                            <Strong>
+                                Height
+                            </Strong>
+                        </td>
+                        <td>{{actor.bioDetails.height}}cm</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <Strong>
+                                Weight
+                            </Strong>
+                        </td>
+                        <td>{{actor.bioDetails.weight}}Kg</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <Strong>
+                                Skin Tone
+                            </Strong>
+                        </td>
+                        <td>{{actor.bioDetails.skinTone}}</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <Strong>
+                                Eye Color
+                            </Strong>
+                        </td>
+                        <td>{{actor.bioDetails.eyeColor}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+              
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Message {{actor.actorName}}</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                
+                <!-- Modal body -->
+                <div class="modal-body">
+                        <textarea rows="3" cols="10" name="" class="form-control" placeholder="Your message..." id="" [(ngModel)]="auditionInvitation"></textarea>
+                </div>
+                
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-warning" (click)="sendAuditionCall()" data-dismiss="modal">Send</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>        
+   </div>
+   
