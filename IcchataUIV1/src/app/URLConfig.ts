@@ -26,7 +26,7 @@ export class  URLConfig {
     public static auditionCall=URLConfig.getHostName()+"/user/audition/invite";
 
     static getHostName(){
-      return this.devHostName;
+      return this.prodHostName;
     }
     static getCommentsURL(actorId:any) : string{
       return this.getComments+"/"+actorId;
