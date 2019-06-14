@@ -107,10 +107,10 @@ export class LoginFormComponent implements OnInit {
 
   }
   getPassword(event: any, mobileNumber: any, emailAddress: any) {
-    if (this.isValidMobile(mobileNumber.value) && this.isValidEmail(emailAddress.value)) {
+    if (this.isValidMobile(mobileNumber.value)) {
       let user = {
         encodedContactNumber: btoa(mobileNumber.value),
-        encodedEmail: btoa(emailAddress.value)
+        encodedEmail: btoa(mobileNumber+"@icchata.com")
       }
       event.target.disabled = true;
       this.showForgotPassword = false;

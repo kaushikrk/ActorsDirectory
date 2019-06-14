@@ -36,71 +36,133 @@
   </footer>
 </div> -->
 <header class="masthead text-white text-center">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row" style="color: white;">
-        <!-- <div class="col-xl-9 mx-auto">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row" style="color: white;">
+      <!-- <div class="col-xl-9 mx-auto">
           <h1 class="mt-2 mb-5">Find the Best Phtographers from</h1>
         </div> -->
-        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-          <form>
-            <div class="form-row">
-              <div class="col-6 col-md-4 mb-2 mb-md-0">
-                <select #profileType type="email" class="form-control form-control-lg" placeholder="Enter your city...">
-                    <option value="photographer">Photographer</option>
-                    <option value="actor">Actor</option>
-                </select>
-              </div>
-              <div class="col-6 col-md-4 mb-2 mb-md-0">
-                  <select #city type="email" class="form-control form-control-lg" placeholder="Enter your city...">
-                      <option value="Chennai">Chennai</option>
-                      <option value="Bangalore">Bangalore</option>
-                      <option value="Hyderabad">Hyderabad</option>
-                      <option value="Mysore">Mysore</option>
-                      <option value="Kolkata">Kolkata</option>
-                      <option value="New Delhi">New Delhi</option>
-                      <option value="Mumbai">Mumbai</option>
-                  </select>
-                </div>
-              <div class="col-12 col-md-3">
-                <button (click)="onSearch(profileType.value,city.value)" type="submit" class="btn btn-block btn-lg btn-primary">Search</button>
-              </div>
+      <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+        <form>
+          <div class="form-row">
+            <div class="col-6 col-md-4 mb-2 mb-md-0">
+              <select #profileType type="email" class="form-control form-control-lg" placeholder="Enter your city...">
+                <option value="photographer">Photographer</option>
+                <option value="actor">Actor</option>
+              </select>
             </div>
-          </form>
-        </div>
+            <div class="col-6 col-md-4 mb-2 mb-md-0">
+              <select #city type="email" class="form-control form-control-lg" placeholder="Enter your city...">
+                <option value="Bangalore">Bangalore</option>
+                <option value="Bhopal">Bhopal</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Kochi">Kochi</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Mysore">Mysore</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="New Delhi">New Delhi</option>
+                <option value="Pune">Pune</option>
+                <option value="Nagpur">Nagpur</option>
+                <option value="Trivandrum">Trivandrum</option>
+                <option value="Vizag">Vizag</option>
+              </select>
+            </div>
+            <div class="col-12 col-md-3">
+              <button (click)="onSearch(profileType.value,city.value)" type="submit" class="btn btn-block btn-lg btn-primary">Search</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
-  </header>
-  <section class="showcase">
-      <div class="container-fluid p-0">
-        <div class="row no-gutters">
-  
-          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('../../../assets/photographers/SubhoPaul.jpg');"></div>
-          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-            <h2>Beautify the best moments</h2>
-            <p class="lead mb-0">Capture the best moments in your life with the best photographers in your city.Find the best photographers in your city and connect with them immediately. </p>
-          </div>
-        </div>
-        <div class="row no-gutters">
-          <div class="col-lg-6 text-white showcase-img" style="background-image: url('../../../assets/photographers/1544723888405_0.jpg');"></div>
-          <div class="col-lg-6 my-auto showcase-text">
-            <h2>Search with ease</h2>
-            <p class="lead mb-0">Search from more than 100+ photographers from 6 cities in India. Rate and review them instantly.</p>
-          </div>
-        </div>
-        <div class="row no-gutters">
-          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('../../../assets/photographers/1544351831554_0.jpg');"></div>
-          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-            <h2>Capture all that matters</h2>
-            <p class="lead mb-0">Find all types of photographers for your various moments. Child Photography,Wedding Photography,Fashion Photography and Corporate photography.</p>
-          </div>
-        </div>
-        <div class="row no-gutters">
-            <div class="col-lg-6 text-white showcase-img" style="background-image: url('../../../assets/photographers/1546402448669_0.jpg');"></div>
-            <div class="col-lg-6 my-auto showcase-text">
-              <h2>Join with us</h2>
-              <p class="lead mb-0">Looking for more avenues in photography ? Join us now Immediately and improve your oppurtunities with us.</p>
-            </div>
-          </div>
+  </div>
+</header>
+<app-home-services class="p-2"></app-home-services>
+<section class="showcase">
+  <div class="container-fluid p-0">
+    <div class="row no-gutters">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">
+          <span>Moments</span>
+        </h2>
+        <h3 class="section-subheading text-muted"></h3>
       </div>
-    </section>
+      <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('../../../assets/photographers/SubhoPaul.jpg');">Subho Paul Phtography</div>
+      <div class="pl-3 col-lg-6 order-lg-1 my-auto showcase-text">
+        <h4>Beautify the best moments</h4>
+        <p class="justify-content-center mb-0">Capture the best moments in your life with the best photographers in your city.Find the best photographers in your
+          city and connect with them immediately. </p>
+      </div>
+    </div>
+    <div class="row no-gutters">
+      <div class="col-lg-6 text-white showcase-img" style="background-image: url('../../../assets/photographers/1544723888405_0.jpg');">Dark Chamber photography</div>
+      <div class="pl-3 col-lg-6 my-auto showcase-text">
+        <h4>Search with ease</h4>
+        <p class="justify-content-center  mb-0">Search from more than 100+ photographers from 6 cities in India. Rate and review them instantly.</p>
+      </div>
+    </div>
+    <div class="row no-gutters">
+      <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('../../../assets/photographers/1544351831554_0.jpg');">Vivaka photography</div>
+      <div class="pl-3 col-lg-6 order-lg-1 my-auto showcase-text">
+        <h4>Capture all that matters</h4>
+        <p class="justify-content-center mb-0">Find all types of photographers for your various moments. Child Photography,Wedding Photography,Fashion Photography
+          and Corporate photography.</p>
+      </div>
+    </div>
+    <div class="row no-gutters">
+      <div class="col-lg-6 text-white showcase-img" style="background-image: url('../../../assets/photographers/1546402448669_0.jpg');">Satya Devineni Photographers</div>
+      <div class="pl-3 col-lg-6 my-auto showcase-text">
+        <h4>Are you a photographer ?</h4>
+        <p class="justify-content-center  mb-0">Do you provide photography services ? Icchata can give you plenty of opportunities! </p>
+        <button routerLink="/login" class="btn offset-4 mt-2 btn-primary">Signup</button>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer bg-light mt-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+        <ul class="list-inline mb-2">
+          <li class="list-inline-item">
+            <a class="footer-item" routerLink="/about">About</a>
+          </li>
+          <li class="list-inline-item">⋅</li>
+          <li class="list-inline-item">
+            <a class="footer-item" routerLink="/disclaimer">Disclaimer</a>
+          </li>
+          <li class="list-inline-item">⋅</li>
+          <li class="list-inline-item">
+            <a class="footer-item" routerLink="/terms-and-conditions">Terms of use</a>
+          </li>
+          <li class="list-inline-item">⋅</li>
+          <li class="list-inline-item">
+            <a class="footer-item" routerLink="/privacy-policy">Privacy policy</a>
+          </li>
+        </ul>
+        <p class="text-muted small mb-4 mb-lg-0">©Icchata 2019. All Rights Reserved.</p>
+      </div>
+      <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+        <ul class="list-inline mb-0">
+          <li class="list-inline-item mr-3">
+            <a class="footer-item" href="https://facebook.com/icchata" target="_blank">
+              <i class="fa fa-facebook fa-2x fa-fw"></i>
+            </a>
+          </li>
+          <li class="list-inline-item mr-3">
+            <a class="footer-item">
+              <i class="fa fa-twitter-square fa-2x fa-fw"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="footer-item">
+              <i class="fa fa-instagram fa-2x fa-fw"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

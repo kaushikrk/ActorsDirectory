@@ -106,3 +106,10 @@ h2{
     color: #444;
     font-weight: 500;
 }
+h2>span{
+    border-bottom: 2px solid #ffc107;
+}
+.footer-item{
+    color:#ba8b00!important;
+    font-size: 12px;
+}

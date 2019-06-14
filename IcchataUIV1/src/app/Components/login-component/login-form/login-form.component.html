@@ -18,7 +18,7 @@
   </div>
   <div class="row">
     <div class="w-25"></div>
-    <div (click)="showForgotPassword=true" class="col mt-2">
+    <div data-toggle="modal" data-target="#myModal" class="col mt-2">
       <a>Forgot Password ?</a>
     </div>
   </div>
@@ -27,3 +27,33 @@
       <input type="button" class="form-control custom-primary-btn" (click)="tab='signup'" value="Don't have a account? Create New">
     </div> -->
 </form>
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    
+      <!-- Modal Header -->
+      <!-- <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div> -->
+      <div class="modal-header">
+          <h4 class="modal-title">Forgot Password ?</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+      <!-- Modal body -->
+      <div class="modal-body">
+        <p>We will send you the password to your mobile..</p>
+        <input #mobileNumber class="form-control input-lg" placeholder="Enter your mobile number" type="number" minlength="10" name="" id="">
+      </div>
+      
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" (click)="getPassword($event,mobileNumber,mobileNumber)">Send</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+  <!-- The Modal -->
+  

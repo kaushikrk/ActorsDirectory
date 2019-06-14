@@ -14,7 +14,7 @@ export class ActorComponent implements OnInit {
   @ViewChild('searchEl',{static:true}) searchEl:any;
   profileType:String;
   searchboxVisible = false;
-  currentPage:any=1;
+  currentPage:any=0;
   noResultsFound:boolean=false;
   totalPage:any=[];
   currentList:ActorModel[] =[];
@@ -97,7 +97,7 @@ export class ActorComponent implements OnInit {
   }
   onPrevPageClick(event:any){
     let sliceStart;
-    if(this.currentPage>1){
+    if(this.currentPage>0){
       this.currentPage--;
       sliceStart=this.currentPage*20;
       this.currentList=this.actorsList.slice(sliceStart,sliceStart+20);
@@ -107,7 +107,8 @@ export class ActorComponent implements OnInit {
   }
   onNextPageClick(event:any){
     let sliceStart;
-    if(this.currentPage<this.actorsList.length/20){
+    let totalPage=Math.floor(this.actorsList.length/20);
+    if(this.currentPage<totalPage){
       this.currentPage++;
       sliceStart=this.currentPage*20;
       this.currentList=this.actorsList.slice(sliceStart,sliceStart+20);

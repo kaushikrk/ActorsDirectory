@@ -13,6 +13,7 @@ import { Configuration } from '../common/config.component';
 })
 export class ProfileComponent implements OnInit {
 
+  actorId: any;
   setProfilePhoto(): any {
     this.profilePhotos = this.actor.actorPhoto ? this.actor.actorPhoto : 'https://ssl.gstatic.com/accounts/ui/avatar_2x.png';
   }
@@ -33,6 +34,8 @@ export class ProfileComponent implements OnInit {
   cities: String[];
   userForm: FormGroup;
   productionForm: FormGroup;
+  selectedServices:any;
+  services:any[] = ['Wedding', 'Fashion', 'Corporate', 'Maternity','Child']
   bioDetails: FormGroup;
   @ViewChild('fileUpload',{static:true}) fileUpload: ElementRef;
 
@@ -77,7 +80,8 @@ export class ProfileComponent implements OnInit {
     this.cities = config.cities;
     this.orgType = config.organizationType;
     this.files = [];
-    let actorId = this.authService.getActorId();
+    this.actorId = this.authService.getActorId();
+    let actorId = this.actorId;
     if (actorId) {
       this.actorService.getProfile(actorId).subscribe(result => {
         if (result.success)

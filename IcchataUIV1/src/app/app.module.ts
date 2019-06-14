@@ -27,23 +27,28 @@ import { SeoService } from './services/SeoService';
 import { AuditionService } from './services/AuditionService';
 import {AutoCompleteModule} from 'primeng/autocomplete';
 import { AppRoutingModule } from './routes';
+import { AuditionFormComponent } from './Auditions/audition-form/audition-form.component';
+import { AuditionpageComponent } from './Auditions/auditionpage/auditionpage.component';
+import { PackageDetailsComponent } from './Components/profile/package-details/package-details.component';
 // import { StoreModule } from '@ngrx/store';
 // import { addCoinReducer } from './reducers/UserReducer';
 
 @NgModule({
   declarations: [
     AppComponent,
+    PackageDetailsComponent,
     MessageScreenComponent,
     HomeComponent,
     FieldValidatorDirective,
     ProfileComponent,
     ContactFormComponent,
     SecurityFormComponent,
-    CommentComponent,
     FbloginComponent,
     ServicesComponent,
     MovieComponent,
-    ListComponent
+    ListComponent,
+    AuditionFormComponent,
+    AuditionpageComponent
   ],
   imports: [
     BrowserModule,

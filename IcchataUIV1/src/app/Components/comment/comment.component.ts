@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class CommentComponent implements OnInit {
 
+  @Input('actorId') actorId:any;
   commentRequired: boolean;
   _actor: any;
   comments: any=[];
@@ -25,7 +26,7 @@ export class CommentComponent implements OnInit {
 
   loadActorComments(): any {
     console.log("loading actors");
-    this.actorService.getComments(this._actor.actorId).subscribe(comments => {
+    this.actorService.getComments(this.actorId).subscribe(comments => {
       comments.forEach(element => {
         if (element.commentedOn) {
           let commentDate = new Date(element.commentedOn);
@@ -42,10 +43,10 @@ export class CommentComponent implements OnInit {
     })
   }
   submitComment(comment: any) {
-    if (this._actor.actorId && this.authService.isUserLoggedIn()) {
+    if (this.actorId && this.authService.isUserLoggedIn()) {
       let body = {
         "comment": comment.value,
-        "actorId": this._actor.actorId,
+        "actorId": this.actorId,
         "userName":this.authService.getLoggedInUserName(),
         "commentedOn": new Date()
       };

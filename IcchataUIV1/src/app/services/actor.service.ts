@@ -18,7 +18,12 @@ export interface Result {
 @Injectable()
 export class ActorService extends CommonService {
 
-
+  deletePackage(userId: any, packageId:any): Observable<any> {
+    return this.http.delete(URLConfig.getHostName()+`/user/${userId}/remove/${packageId}`);
+  }
+  savePackage(userId:any,pricePackage: any): Observable<any> {
+    return this.http.post(URLConfig.getHostName()+`/user/${userId}/package`,pricePackage);
+  }
   searchActorsFromHomePage(profile:any,city:any): any {
     this.cachedQuery={profileType:profile,actorLocation:city};
   }

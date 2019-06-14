@@ -7,6 +7,7 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
 import { URLConfig } from '../../URLConfig';
 import { Location } from "@angular/common";
 import { LoginUtility } from '../../Util/LoginUtility';
+declare var FB:any;
 
 @Component({
   selector: 'app-login-component',
@@ -68,6 +69,46 @@ export class LoginComponentComponent implements OnInit {
       this.router.navigate(['/home']);
     } 
   }
+  facebookLogin(){
+    let me = this;
+    var token= '';
+    FB.login(function(response) {
+      if (response.authResponse) {
+        token=response.authResponse.accessToken;
+       console.log('Welcome!  Fetching your information.... ');
+       FB.api(`/me?fields=name,email`, function(response) {
+        let googleProfile = {
+          userId: response.id,
+          name: response.name,
+          email: response.email,
+          googleUser: true
+        }
+        let user = {
+          actorName: googleProfile.name,
+          encodedEmail: btoa(googleProfile.email),
+          encodedContactNumber: btoa("000"),
+          encodedPassword: btoa("saf#Hav3n")
+        } 
+        me.actorService.googleReferral(user).subscribe(data => {
+          me.loginUtil.loginUser({ userId: googleProfile.email, password: "saf#Hav3n" }, me.actorService, me.authService);
+        }, err => { 
+          if(err.status==422){
+            me.loginUtil.loginUser({ userId: googleProfile.email, password: "saf#Hav3n" }, me.actorService, me.authService).subscribe(data=>{
+              me.actorService.showLoadingScreen(false);
+            },err=>{
+              me.actorService.showLoadingScreen(false);
+            });
+          }
+        });
+        me.authService.googleLogin(googleProfile, token);
+
+       },{ scope: 'email' });
+      } else {
+       console.log('User cancelled login or did not fully authorize.');
+      }
+  });
+  }
+  
   
 
 }

@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div *ngIf="packagesUpdated" class="alert alert-success alert-dismissible">
+        <strong>Success!</strong> Packages updated successfully.
+      </div>
+  <div class="row">
+    <form [formGroup]="pkg" class="col-md-6 p-2">
+        <div class="form-group">
+            <input hidden formControlName="packageId">
+        </div>
+      <div class="form-group">
+        <input formControlName="packageName" placeholder="Package name" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <input formControlName="packageCost" placeholder="Package cost" type="number" class="form-control">
+      </div>
+      <div class="form-group">
+        <textarea formControlName="packageDescription" placeholder="Package Description" rows="3" class="form-control"></textarea>
+      </div>
+      <button class="btn btn-dark"  [disabled]="pkg.invalid" (click)="savepkg()">Add Package</button>
+    </form>
+  </div>
+  <hr>
+  <div class="row">
+    <div  *ngFor="let item of pkgs"  class="col-md-3 p-2 m-2 h-25 border border-secondary">
+      <i class="fa fa-close float-md-right" (click)="deletepkg(item)"></i>
+      <i class="fa fa-pencil mr-2 float-md-right" (click)="editpkg(item)"></i>
+      <h4>{{item.packageName}}</h4>
+      <section>{{item.packageDescription}}</section>
+      <p>{{item.packageCost}}</p>
+    </div>
+  </div>
+</div>

@@ -33,6 +33,7 @@ footer>span:hover{
     font-size:120% !important;
     font-weight: 700 !important;
 }
-a{
+.footer-item{
     color:#ba8b00!important;
+    font-size: 12px;
 }

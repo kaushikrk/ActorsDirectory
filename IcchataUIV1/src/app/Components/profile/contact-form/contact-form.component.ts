@@ -23,7 +23,7 @@ export class ContactFormComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.actor=JSON.parse(this.actor)
+    this.actor=JSON.parse(this.actor);
     this.contactForm.patchValue(this.actor);
   }
   SaveContactForm(){
